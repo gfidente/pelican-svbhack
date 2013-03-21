@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %}{{ SITENAME }} - {{ page.title }}{% endblock %}
+{% block content %}
+{% set custom_header = page.title %}
+{% include "header.html" %}
+<article>
+  <h1 id="title">
+    <a href="{{ SITEURL }}/{{ page.url }}" rel="bookmark">{{ page.title }}</a>
+  </h1>
+  {{ page.content }}
+</article>
+
+<footer>
+  <a href="{{ SITEURL }}/" class="button_accent">&larr;Back to blog</a>
+</footer>
+{% endblock %}

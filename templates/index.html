@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+{% set custom_header = "Index" %}
+{% include "header.html" %}
+{% for article in articles_page.object_list %}
+<article>
+  <h1 id="title">
+      <a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title }}">{{ article.title }}</a>
+  </h1>
+  <div id="article_content">
+    {{ article.summary }}
+  </div>
+</article>
+{% endfor %}
+<footer>
+  {% include "pagination.html" %}
+</footer>
+{% endblock %}
