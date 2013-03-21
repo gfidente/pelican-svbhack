@@ -28,9 +28,7 @@ Supports the most common global variables, patches are welcomed if you need bett
 - `GOOGLE_ANALYTICS`
 - `TAGLINE`
 
-When developing locally, you may want to set the following variable:
-
-`SITEURL = http://localhost:8000`
+When developing locally, you may want to set the following variable: `SITEURL = http://localhost:8000`
 
 ## MODIFICATIONS
 
@@ -39,8 +37,9 @@ When developing locally, you may want to set the following variable:
 
 ## AUTHOR
 
-pelican-svbtle is authored by William Ting
-pelican-svbhack is authored by Giulio Fidente
+pelican-svbtle is authored by William Ting.
+
+pelican-svbhack is authored by Giulio Fidente.
 
 ## LICENSE
 
