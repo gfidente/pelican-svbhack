@@ -3,11 +3,13 @@
 {% block content %}
 {% set custom_header = "Categories" %}
 {% include "header.html" %}
-<dl>
+<div id="like_article">
   <ul>
   {% for category, articles in categories %}
     <li><a href="{{ SITEURL }}/{{ category.url }}">{{ category }}</a></li>
   {% endfor %}
   </ul>
-</dl>
+</div>
+<footer>
+</footer>
 {% endblock %}

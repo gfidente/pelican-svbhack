@@ -3,11 +3,13 @@
 {% block content %}
 {% set custom_header = "Tags" %}
 {% include "header.html" %}
-<dl>
+<div id="like_article">
   <ul>
   {% for tag in tag_cloud %}
     <li><a href="{{ SITEURL }}/tag/{{ tag.0 }}.html">{{ tag.0 }}</a></li>
   {% endfor %}
   </ul>
-</dl>
+</div>
+<footer>
+</footer>
 {% endblock %}

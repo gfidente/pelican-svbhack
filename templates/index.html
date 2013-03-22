@@ -11,6 +11,9 @@
     {{ article.summary }}
   </div>
 </article>
+{% if not loop.last %}
+<hr />
+{% endif %}
 {% endfor %}
 <footer>
   {% include "pagination.html" %}
