@@ -1,13 +1,14 @@
 {% extends "base.html" %}
 {% block title %}{{ SITENAME }} - Tags{% endblock %}
 {% block content %}
-{% set custom_header = "Tags" %}
-{% include "header.html" %}
+<header>
+  <h3>Tags</h3>
+</header>
 <div id="like_article">
   <ul>
-  {% for tag in tag_cloud %}
+    {% for tag in tag_cloud %}
     <li><a href="{{ SITEURL }}/tag/{{ tag.0 }}.html">{{ tag.0 }}</a></li>
-  {% endfor %}
+    {% endfor %}
   </ul>
 </div>
 <footer>

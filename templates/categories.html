@@ -1,13 +1,14 @@
 {% extends "base.html" %}
 {% block title %}{{ SITENAME }} - Categories{% endblock %}
 {% block content %}
-{% set custom_header = "Categories" %}
-{% include "header.html" %}
+<header>
+  <h3>Categories</h3>
+</header>
 <div id="like_article">
   <ul>
-  {% for category, articles in categories %}
+    {% for category, articles in categories %}
     <li><a href="{{ SITEURL }}/{{ category.url }}">{{ category }}</a></li>
-  {% endfor %}
+    {% endfor %}
   </ul>
 </div>
 <footer>

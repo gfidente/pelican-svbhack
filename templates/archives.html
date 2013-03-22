@@ -1,14 +1,15 @@
 {% extends "base.html" %}
 {% block title %}{{ SITENAME }} - Archives{% endblock %}
 {% block content %}
-{% set custom_header = "Archives" %}
-{% include "header.html" %}
+<header>
+  <h3>Archives</h3>
+</header>
 <div id="like_article">
   <dl>
-  {% for article in dates %}
+    {% for article in dates %}
     <dt>{{ article.locale_date }}</dt>
     <dd><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></dd>
-  {% endfor %}
+    {% endfor %}
   </dl>
 </div>
 <footer>

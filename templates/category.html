@@ -1,1 +1,10 @@
 {% extends "index.html" %}
+{% block title %}{{ SITENAME }} - {{ category }}{% endblock %}
+{% block head %}
+{% if CATEGORY_FEED_ATOM %}
+<link href="{{ FEED_DOMAIN }}/{{ CATEGORY_FEED_ATOM|format(category) }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} {{ category }} Category Atom Feed" />
+{% endif %}
+{% if CATEGORY_FEED_RSS %}
+<link href="{{ FEED_DOMAIN }}/{{ CATEGORY_FEED_RSS|format(category) }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} {{ category }} Category RSS Feed" />
+{% endif %}
+{% endblock %}
