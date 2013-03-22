@@ -5,11 +5,11 @@
   <h3>Posted on {{ article.locale_date }}</h3>
 </header>
 <article>
-  <h1 id="title">
+  <h1 id="article_title">
     <a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a>
   </h1>
 
-  <div id="article_content">
+  <div id="article_text">
     {{ article.content }}
   </div>
 

@@ -4,13 +4,15 @@
 <header>
   <h3>Tags</h3>
 </header>
-<div id="like_article">
-  <ul>
-    {% for tag in tag_cloud %}
-    <li><a href="{{ SITEURL }}/tag/{{ tag.0 }}.html">{{ tag.0 }}</a></li>
-    {% endfor %}
-  </ul>
-</div>
+<article>
+  <div id="article_text">
+    <ul>
+      {% for tag in tag_cloud %}
+      <li><a href="{{ SITEURL }}/tag/{{ tag.0 }}.html">{{ tag.0 }}</a></li>
+      {% endfor %}
+    </ul>
+  </div>
+</article>
 <footer>
 </footer>
 {% endblock %}

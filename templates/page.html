@@ -5,10 +5,12 @@
   <h3>{{ page.title }}</h3>
 </header>
 <article>
-  <h1 id="title">
+  <h1 id="article_title">
     <a href="{{ SITEURL }}/{{ page.url }}" rel="bookmark">{{ page.title }}</a>
   </h1>
-  {{ page.content }}
+  <div id="article_text">
+    {{ page.content }}
+  </div>
 </article>
 <footer>
   <a href="{{ SITEURL }}/" class="button_accent">&larr; Index</a>

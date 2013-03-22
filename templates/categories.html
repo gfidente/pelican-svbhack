@@ -4,13 +4,15 @@
 <header>
   <h3>Categories</h3>
 </header>
-<div id="like_article">
-  <ul>
-    {% for category, articles in categories %}
-    <li><a href="{{ SITEURL }}/{{ category.url }}">{{ category }}</a></li>
-    {% endfor %}
-  </ul>
-</div>
+<article>
+  <div id="article_text">
+    <ul>
+      {% for category, articles in categories %}
+      <li><a href="{{ SITEURL }}/{{ category.url }}">{{ category }}</a></li>
+      {% endfor %}
+    </ul>
+  </div>
+</article>
 <footer>
 </footer>
 {% endblock %}
