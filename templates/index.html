@@ -2,9 +2,8 @@
 {% block content %}
 <header>
   <h3>
-    Index
+    <a href="{{ SITEURL }}">Index</a>
     {% block headnotes %}
-    {% if FEED_ALL_ATOM %}&gt; <a href="{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}">Full Atom Feed</a>{% endif %}
     {% endblock headnotes %}
   </h3>
 </header>
