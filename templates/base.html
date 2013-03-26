@@ -21,11 +21,9 @@
 </head>
 
 <body>
-  <section id="sidebar">
-    <figure>
-      <a href="{{ SITEURL }}"><img src="{{ SITEURL }}/theme/images/gravatar_to192.png" alt="logo"></a>
-    </figure>
+  <aside>
     <div id="user_meta">
+      <a href="{{ SITEURL }}"><img src="{{ SITEURL }}/theme/images/gravatar_to192.png" alt="logo"></a>
       <h1><a href="{{ SITEURL }}">{{ AUTHOR }}</a></h1>
       <h2>{{ TAGLINE }}</h2>
       <ul>
@@ -45,12 +43,12 @@
         {% endfor %}
       </ul>
     </div>
-  </section>
+  </aside>
 
-  <section id="posts">
+  <main>
     {% block content %}
     {% endblock %}
-  </section>
+  </main>
 
   {% include "analytics.html" %}
 </body>
