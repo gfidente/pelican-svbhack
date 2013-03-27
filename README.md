@@ -1,6 +1,6 @@
 # SVBHACK
 
-pelican-svbhack is a theme for [Pelican](http://getpelican.com) and it is my hack of a svbtle-like theme, started as a fork of [pelican-svbtle](https://github.com/wting/pelican-svbtle).
+pelican-svbhack is a theme for [Pelican](http://getpelican.com), it is my hack of a svbtle-like theme. It started as a fork of [pelican-svbtle](https://github.com/wting/pelican-svbtle) but then was almost completely rewritten.
 
 ## DEMO
 
