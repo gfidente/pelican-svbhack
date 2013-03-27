@@ -35,18 +35,11 @@ hr {
 }
 
 aside {
-  width: 25%;
-  height: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  border-right: @light-grey 1px solid;
-
   div#user_meta {
-    max-width: 192px;
     margin: 0;
     padding: 40px;
     font-family: 'PT Serif', serif;
+    text-align: center;
 
     h1 {
       margin-bottom: 10px;
@@ -66,11 +59,13 @@ aside {
   
       li {
         padding: 10px 0 10px 0;
+        display: inline;
+
         a {
           color: @med-grey;
           border: 2px solid @light-grey;
           .border-radius(10px);
-          padding: 5px 15px 5px 15px;
+          padding: 5px 10px 5px 10px;
         }
       }
     }
@@ -78,15 +73,9 @@ aside {
 }
 
 main {
-  width: 75%;
-  position: absolute;
-  top: 0;
-  left: 25%;
-  overflow-x: hidden;
-  overflow-y: hidden;
-
   header {
     padding: 40px;
+    border-top: @light-grey 1px solid;
     border-bottom: @light-grey 1px solid;
 
     h3 {
@@ -97,7 +86,8 @@ main {
 
   article {
     padding: 40px;
-    max-width: 672px;
+    min-width: 140px;
+    max-width: 608px;
 
     h1 {
       font-size: 1.5em;
@@ -142,7 +132,7 @@ main {
     }
 
     blockquote {
-      padding-left: 20px;
+      padding-left: 15px;
       color: @med-grey;
     }
 
@@ -191,6 +181,42 @@ main {
     }
 
     p#paginator {
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  aside {
+    width: 25%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    border-right: @light-grey 1px solid;
+
+    div#user_meta {
+      min-width: 140px;
+      max-width: 192px;
+      text-align: left;
+
+      ul {
+        li {
+          display: block;
+        }
+      }
+    }
+  }
+
+  main {
+    width: 75%;
+    position: absolute;
+    top: 0;
+    left: 25%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+
+    header {
+      border-top: 0;
     }
   }
 }
