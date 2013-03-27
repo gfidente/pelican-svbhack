@@ -23,7 +23,13 @@
 <body>
   <aside>
     <div id="user_meta">
-      <a href="{{ SITEURL }}"><img src="{{ SITEURL }}/theme/images/logo.png" alt="logo"></a>
+      <a href="{{ SITEURL }}">
+        {% if USER_LOGO_URL %}
+        <img src="{{ USER_LOGO_URL }}" alt="logo">
+        {% else %}
+        <img src="{{ SITEURL }}/theme/images/logo.png" alt="logo">
+        {% endif %}
+      </a>
       <h1><a href="{{ SITEURL }}">{{ AUTHOR }}</a></h1>
       <h2>{{ TAGLINE }}</h2>
       <ul>

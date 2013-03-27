@@ -27,6 +27,7 @@ Supports the most common global variables, patches are welcomed if you need bett
 
 - `GOOGLE_ANALYTICS`
 - `TAGLINE`
+- `USER_LOGO_URL`
 
 When developing locally, you may want to set the following variable: `SITEURL = http://localhost:8000`
 
