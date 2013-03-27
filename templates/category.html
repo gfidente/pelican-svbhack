@@ -8,6 +8,6 @@
 <link href="{{ FEED_DOMAIN }}/{{ CATEGORY_FEED_RSS|format(category) }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} {{ category }} Category RSS Feed" />
 {% endif %}
 {% endblock %}
-{% block headnotes %}
-&gt; CATEGORY: {{ category }}
+{% block header %}
+<a href="{{ SITEURL }}">Index</a> &#124; CATEGORY: {{ category }}
 {% endblock %}

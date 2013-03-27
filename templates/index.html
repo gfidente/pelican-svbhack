@@ -2,10 +2,9 @@
 {% block content %}
 <header>
   <h3>
-    <a href="{{ SITEURL }}">Index</a>
-    {% block headnotes %}
-    &#124; <a href="{{ SITEURL }}/archives.html">Archives</a>
-    {% endblock headnotes %}
+    {% block header %}
+    Index &#124; <a href="{{ SITEURL }}/archives.html">Archives</a>
+    {% endblock header %}
   </h3>
 </header>
 {% for article in articles_page.object_list %}

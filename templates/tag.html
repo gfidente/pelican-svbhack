@@ -8,6 +8,6 @@
 <link href="{{ FEED_DOMAIN }}/{{ TAG_FEED_RSS|format(tag) }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} {{ tag }} Tag RSS Feed" />
 {% endif %}
 {% endblock %}
-{% block headnotes %}
-&gt; TAG: {{ tag }}
+{% block header %}
+<a href="{{ SITEURL }}">Index</a> &#124; TAG: {{ tag }}
 {% endblock %}
