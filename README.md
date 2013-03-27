@@ -4,7 +4,7 @@ pelican-svbhack is a theme for [Pelican](http://getpelican.com), it is my hack o
 
 ## DEMO
 
-You can see the [theme in action](http://www.giuliofidente.im/).
+You can see the [theme in action](http://www.giuliofidente.com/).
 
 ## FEATURES
 
