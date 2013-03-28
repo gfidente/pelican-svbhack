@@ -8,17 +8,20 @@
   <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/pygments.css">
   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=PT+Sans|PT+Serif|PT+Mono">
 
-  <title>{% block title %}{{ SITENAME }}{% endblock %}</title>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width; initial-scale=1.0">
+
   {% if FEED_ALL_ATOM %}
   <link href="{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Full Atom Feed" />
   {% endif %}
   {% if FEED_ALL_RSS %}
   <link href="{{ FEED_DOMAIN }}/{{ FEED_ALL_RSS }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} Full RSS Feed" />
   {% endif %}
+
   {% block head %}
   {% endblock %}
+
+  <title>{% block title %}{{ SITENAME }}{% endblock %}</title>
 </head>
 
 <body>
@@ -53,11 +56,25 @@
   </aside>
 
   <main>
+    <header>
+      <h3>
+        {% block header %}
+        <a href="{{ SITEURL }}">Index</a> &#124; <a href="{{ SITEURL }}/archives.html">Archives</a> &#124; <a href="{{ SITEURL }}/categories.html">Categories</a>
+        {% endblock header %}
+      </h3>
+    </header>
+
     {% block content %}
     {% endblock %}
+
+    <footer>
+      {% block footer %}
+      {% endblock %}
+    </footer>
+
     <div id="ending_message">
       <hr />
-      <p>Made using <a href="http://getpelican.com" target="_new">Pelican</a>, theme from Giulio Fidente. Get it <a href="https://github.com/giulivo/pelican-svbhack" target="_new">from github</a>.</p>
+      <p>Made using <a href="http://getpelican.com" target="_blank">Pelican</a>, content from Giulio Fidente. Get the blog theme <a href="https://github.com/giulivo/pelican-svbhack" target="_blank">from github</a>.</p>
     </div>
   </main>
 

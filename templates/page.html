@@ -1,9 +1,10 @@
 {% extends "base.html" %}
 {% block title %}{{ SITENAME }} - {{ page.title }}{% endblock %}
+{% block header %}
+{{ page.title }
+{% endblock %}
+
 {% block content %}
-<header>
-  <h3>{{ page.title }}</h3>
-</header>
 <article>
   <div id="article_title">
     <a href="{{ SITEURL }}/{{ page.url }}" rel="bookmark">{{ page.title }}</a>
@@ -12,7 +13,8 @@
     {{ page.content }}
   </div>
 </article>
-<footer>
-  <a href="{{ SITEURL }}/" class="button_accent">&larr; Back to Index</a>
-</footer>
+{% endblock %}
+
+{% block footer %}
+<a href="{{ SITEURL }}/" class="button_accent">&larr; Back to Index</a>
 {% endblock %}

@@ -1,12 +1,5 @@
 {% extends "base.html" %}
 {% block content %}
-<header>
-  <h3>
-    {% block header %}
-    Index &#124; <a href="{{ SITEURL }}/archives.html">Archives</a> &#124; <a href="{{ SITEURL }}/categories.html">Categories</a>
-    {% endblock header %}
-  </h3>
-</header>
 {% for article in articles_page.object_list %}
 <article>
   <div id="article_title">
@@ -20,7 +13,8 @@
 <hr />
 {% endif %}
 {% endfor %}
-<footer>
-  {% include "pagination.html" %}
-</footer>
+{% endblock %}
+
+{% block footer %}
+{% include "pagination.html" %}
 {% endblock %}

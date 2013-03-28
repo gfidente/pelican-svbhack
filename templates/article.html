@@ -1,9 +1,10 @@
 {% extends "base.html" %}
 {% block title %}{{ SITENAME }} - {{ article.title }}{% endblock %}
+{% block header %}
+Posted on {{ article.locale_date }}
+{% endblock %}
+
 {% block content %}
-<header>
-  <h3>Posted on {{ article.locale_date }}</h3>
-</header>
 <article>
   <div id="article_title">
     <a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a>
@@ -24,7 +25,8 @@
     {% endif %}
   </div>
 </article>
-<footer>
-  <a href="{{ SITEURL }}/" class="button_accent">&larr; Back to Index</a>
-</footer>
+{% endblock %}
+
+{% block footer %}
+<a href="{{ SITEURL }}/" class="button_accent">&larr; Back to Index</a>
 {% endblock %}
