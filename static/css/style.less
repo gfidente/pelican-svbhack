@@ -43,11 +43,11 @@ aside {
     text-align: center;
 
     h1 {
-      margin: 10px 0 0 0;
+      margin: 15px 0 5px 0;
     }
 
     p {
-      margin: 0 0 10px 0;
+      margin: 0 0 15px 0;
       font-size: 0.75em;
     }
   
@@ -133,6 +133,7 @@ main {
 
   footer {
     border-top: @light-grey 1px solid;
+    border-bottom: @light-grey 1px solid;
     padding: 40px;
 
     a.button_accent {
@@ -157,8 +158,8 @@ main {
   }
 
   div#ending_message {
-    text-align: center;
-    font-color: @ligh-grey;
+    padding: 0 40px 0 40px;
+    font-color: @light-grey;
     font-size: 0.75em;
   }
 }
@@ -171,6 +172,10 @@ main {
     top: 0;
     left: 0;
     border-right: @light-grey 1px solid;
+
+    h1 {
+      margin: 10px 0 0 0;
+    }
 
     div#user_meta {
       max-width: 192px;
