@@ -6,13 +6,16 @@
 @dark-grey:  #4d4d4d;
 @blue:  #0e94ec;
 @accent:  @blue;
+@sans: 'PT Sans', sans-serif;
+@serif: 'PT Serif', serif;
+@mono: 'PT Mono', monospace;
 
 body {
   margin: 0;
   padding: 0;
   background-color: @white;
   color: @dark-grey;
-  font-family: 'PT Sans', sans-serif;
+  font-family: @sans;
   font-size: 1em;
 }
 
@@ -36,19 +39,16 @@ hr {
 
 aside {
   div#user_meta {
-    margin: 0;
     padding: 40px;
-    font-family: 'PT Serif', serif;
     text-align: center;
 
     h1 {
-      margin-bottom: 10px;
-      font-size: 1.75em;
+      margin: 20px 0 5px 0;
     }
-  
-    h2 {
+
+    p {
+      margin: 0;
       font-size: 0.75em;
-      font-weight: normal;
     }
   
     ul {
@@ -58,14 +58,14 @@ aside {
       list-style-type: none;
   
       li {
-        padding: 10px 0 10px 0;
+        margin-right: 10px;
         display: inline;
 
         a {
+          padding: 5px 15px 5px 15px;
+          border: 3px solid @light-grey;
+          .border-radius(15px);
           color: @med-grey;
-          border: 2px solid @light-grey;
-          .border-radius(10px);
-          padding: 5px 10px 5px 10px;
         }
       }
     }
@@ -78,82 +78,54 @@ main {
     border-top: @light-grey 1px solid;
     border-bottom: @light-grey 1px solid;
 
-    h3 {
+    p {
+      font-weight: bold;
       font-size: 0.75em;
       text-transform: uppercase;
     }
   }
 
   article {
+    max-width: 640px;
     padding: 40px;
-    min-width: 140px;
-    max-width: 608px;
 
-    h1 {
-      font-size: 1.5em;
-    }
-
-    h2 {
-      font-size: 1.375em;
-    }
-
-    h3 {
-      font-size: 1.25em;
-    }
-
-    h4 {
-      font-size: 1.125em;
-    }
-
-    h5 {
-      font-size: 1em;
-    }
-
-    h6 {
-      font-size: 0.75em;
-    }
-
-    code {
-      padding: 2px;
-      color: @black;
-      font-size: 0.875em;
-      font-family: 'PT Mono', monospace;
-      background: @light-grey;
-    }
-
-    pre {
-      padding-left: 5px;
-      color: @black;
-      border-left: 5px solid @accent;
-      font-size: 0.875em;
-      font-family: 'PT Mono', monospace;
-      background: @light-grey;
-      line-height: 1.25em;
-    }
-
-    blockquote {
-      padding-left: 15px;
-      color: @med-grey;
-    }
-
-    div#article_title{
-      a {
-        font-size: 1.75em;
-      }
+    div#article_title {
     }
 
     div#article_text {
-      margin: 0;
-      padding: 0;
-      line-height: 1.625em;
+      line-height: 1.5em;
       a {
         text-decoration: underline;
+      }
+
+      code {
+        margin: 2px;
+        padding: 2px;
+        color: @black;
+        font-size: 0.875em;
+        font-family: @mono;
+        background: @light-grey;
+      }
+
+      pre {
+        margin: 2px;
+        padding: 2px;
+        color: @black;
+        border-left: 3px solid @accent;
+        font-size: 0.875em;
+        font-family: @mono;
+        background: @light-grey;
+        line-height: 1.25em;
+      }
+
+      blockquote {
+        margin: 2px;
+        padding-left: 40px;
+        color: @med-grey;
       }
     }
 
     div#article_meta {
-      margin: 0;
-      padding: 0;
       font-size: 0.625em;
       color: @med-grey;
     }
@@ -201,12 +173,12 @@ main {
     border-right: @light-grey 1px solid;
 
     div#user_meta {
-      min-width: 140px;
       max-width: 192px;
       text-align: left;
 
       ul {
         li {
+          margin-bottom: 26px;
           display: block;
         }
       }
@@ -220,6 +192,10 @@ main {
     left: 25%;
     overflow-x: hidden;
     overflow-y: hidden;
+
+    article {
+      max-width: 640px;
+    }
 
     header {
       border-top: 0;

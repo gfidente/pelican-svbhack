@@ -3,7 +3,7 @@
 {% for article in articles_page.object_list %}
 <article>
   <div id="article_title">
-    <a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title }}">{{ article.title }}</a>
+    <h2><a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title }}">{{ article.title }}</a></h2>
   </div>
   <div id="article_text">
     {{ article.summary }}

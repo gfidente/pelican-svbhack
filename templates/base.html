@@ -35,7 +35,7 @@
         {% endif %}
       </a>
       <h1><a href="{{ SITEURL }}">{{ AUTHOR }}</a></h1>
-      <h2>{{ TAGLINE }}</h2>
+      <p>{{ TAGLINE }}</p>
       <ul>
         {% for title, link in MENUITEMS %}
         <li><a href="{{ link }}">{{ title }}</a></li>
@@ -57,11 +57,11 @@
 
   <main>
     <header>
-      <h3>
+      <p>
         {% block header %}
         <a href="{{ SITEURL }}">Index</a> &#124; <a href="{{ SITEURL }}/archives.html">Archives</a> &#124; <a href="{{ SITEURL }}/categories.html">Categories</a>
         {% endblock header %}
-      </h3>
+      </p>
     </header>
 
     {% block content %}
