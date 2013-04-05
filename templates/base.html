@@ -23,6 +23,8 @@
   {% endblock %}
 
   <title>{% block title %}{{ SITENAME }}{% endblock %}</title>
+
+  {% include "analytics.html" %}
 </head>
 
 <body>
@@ -77,7 +79,5 @@
       <p>&copy Giulio Fidente. Built using <a href="http://getpelican.com" target="_blank">Pelican</a>. Fork the blog theme <a href="https://github.com/giulivo/pelican-svbhack" target="_blank">on github</a>.</p>
     </div>
   </main>
-
-  {% include "analytics.html" %}
 </body>
 </html>
