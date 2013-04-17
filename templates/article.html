@@ -1,5 +1,8 @@
 {% extends "base.html" %}
-{% block title %}{{ SITENAME }} - {{ article.title }}{% endblock %}
+{% block head %}
+<meta name="keywords" content="{{ article.tags|join(', ')  }}">
+{% endblock %}
+{% block title %}{{ article.title }}{% endblock %}
 {% block header %}
 Posted on {{ article.locale_date }}
 {% endblock %}
