@@ -2,9 +2,11 @@
 {% block head %}
 <meta name="keywords" content="{{ article.tags|join(', ')  }}">
 {% endblock %}
+
 {% block title %}{{ article.title }}{% endblock %}
+
 {% block header %}
-Posted on {{ article.locale_date }}
+<p>Posted on {{ article.locale_date }}</p>
 {% endblock %}
 
 {% block content %}
@@ -12,11 +14,9 @@ Posted on {{ article.locale_date }}
   <div id="article_title">
     <h3><a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark">{{ article.title }}</a></h3>
   </div>
-
   <div id="article_text">
     {{ article.content }}
   </div>
-
   <div id="article_meta">
     <p>Category: <a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a></p>
     {% if article.tags %}
@@ -31,5 +31,5 @@ Posted on {{ article.locale_date }}
 {% endblock %}
 
 {% block footer %}
-<a href="{{ SITEURL }}/" class="button_accent">&larr; Back to Index</a>
+<p><a href="{{ SITEURL }}/" class="button_accent">&larr; Back to Index</a></p>
 {% endblock %}

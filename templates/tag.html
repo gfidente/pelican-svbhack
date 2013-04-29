@@ -1,5 +1,6 @@
 {% extends "index.html" %}
 {% block title %}Tag: {{ tag }}{% endblock %}
+
 {% block head %}
 {% if TAG_FEED_ATOM %}
 <link href="{{ FEED_DOMAIN }}/{{ TAG_FEED_ATOM|format(tag) }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} {{ tag }} Tag Atom Feed" />
@@ -8,12 +9,13 @@
 <link href="{{ FEED_DOMAIN }}/{{ TAG_FEED_RSS|format(tag) }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} {{ tag }} Tag RSS Feed" />
 {% endif %}
 {% endblock %}
+
 {% block header %}
-Tag: {{ tag }}
+<p>Tag: {{ tag }}
 {% if TAG_FEED_ATOM %}
 &#124; <a href="{{ FEED_DOMAIN }}/{{ TAG_FEED_ATOM|format(tag) }}">Atom Feed</a>
 {% endif %}
 {% if TAG_FEED_RSS %}
 &#124; <a href="{{ FEED_DOMAIN }}/{{ TAG_FEED_RSS|format(tag) }}">RSS Feed</a>
-{% endif %}
+{% endif %}</p>
 {% endblock %}
