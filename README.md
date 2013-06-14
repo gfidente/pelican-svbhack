@@ -26,21 +26,13 @@ Clone the [repository](https://github.com/giulivo/pelican-svbhack), edit your `p
 
 Supports a number of common global variables but patches are welcomed if you need better support.
 
-- `GOOGLE_ANALYTICS`
+- `GOOGLE_ANALYTICS` your UA-XYZ code
 
-set this to your UA-XYZ code
+- `USER_LOGO_URL` make this point to a page/face logo
 
-- `USER_LOGO_URL`
+- `TAGLINE` some text rendered right below the logo
 
-make it point to a page/face logo
-
-- `TAGLINE`
-
-some text rendered right below the logo
-
-- `INTERNET_DEFENSE_LEAGUE`
-
-set this to `True` if you want to enable the [Internet Defense League](http://internetdefenseleague.org) code
+- `INTERNET_DEFENSE_LEAGUE` set to `True` if you want to enable the [Internet Defense League](http://internetdefenseleague.org) code
 
 When developing locally, you may want to set the following variable: `SITEURL = http://localhost:8000`
 
