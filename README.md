@@ -1,6 +1,6 @@
 # SVBHACK
 
-pelican-svbhack is a responsive theme for [Pelican](http://getpelican.com), it is my hack of a svbtle-like theme. It started as a fork of [pelican-svbtle](https://github.com/wting/pelican-svbtle) but then was almost completely rewritten.
+pelican-svbhack is a responsive theme for [Pelican](http://getpelican.com), it is my hack of a svbtle-like theme.
 
 ## DEMO
 
@@ -24,11 +24,23 @@ Clone the [repository](https://github.com/giulivo/pelican-svbhack), edit your `p
 
 ## PELICANCONF.PY
 
-Supports the most common global variables, patches are welcomed if you need better support. In addition to the standard ones, you can also set:
+Supports a number of common global variables but patches are welcomed if you need better support.
 
 - `GOOGLE_ANALYTICS`
-- `TAGLINE`
+
+set this to your UA-XYZ code
+
 - `USER_LOGO_URL`
+
+make it point to a page/face logo
+
+- `TAGLINE`
+
+some text rendered right below the logo
+
+- `INTERNET_DEFENSE_LEAGUE`
+
+set this to `True` if you want to enable the [Internet Defense League](http://internetdefenseleague.org) code
 
 When developing locally, you may want to set the following variable: `SITEURL = http://localhost:8000`
 
@@ -38,8 +50,6 @@ When developing locally, you may want to set the following variable: `SITEURL = 
 - A different Pygmentize theme can be used by editing `./Makefile` and running `make pygments`.
 
 ## AUTHOR
-
-pelican-svbtle is authored by William Ting.
 
 pelican-svbhack is authored by Giulio Fidente.
 

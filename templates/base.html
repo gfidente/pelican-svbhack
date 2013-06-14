@@ -28,7 +28,7 @@
     {% block title %}{{ SITENAME }}{% endblock %}
   </title>
 
-  {% include "analytics.html" %}
+  {% include "modules/analytics.html" %}
 </head>
 
 <body>
@@ -84,8 +84,9 @@
     </footer>
 
     <div id="ending_message">
-      <p>&copy Giulio Fidente. Built using <a href="http://getpelican.com" target="_blank">Pelican</a>. You can fork the theme on <a href="https://github.com/giulivo/pelican-svbhack" target="_blank">github</a>.</p>
+      <p>&copy Giulio Fidente. Built using <a href="http://getpelican.com" target="_blank">Pelican</a>. You can fork the theme on <a href="https://github.com/giulivo/pelican-svbhack" target="_blank">github</a>. {% if INTERNET_DEFENSE_LEAGUE %}Join the <a href="http://internetdefenseleague.org">Internet Defense League</a>{% endif %}.</p>
     </div>
   </main>
+  {% include "modules/idl.html" %}
 </body>
 </html>
