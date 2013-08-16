@@ -28,11 +28,11 @@ Supports a number of common global variables but patches are welcomed if you nee
 
 - `GOOGLE_ANALYTICS` your UA-XYZ code
 
-- `USER_LOGO_URL` make this point to a page/face logo
+- `USER_LOGO_URL` you don't need to replace the logo placeholder, instead put your logo in content/images/your_logo.png and make this point to `SITEURL + '/static/images/your_logo.png'`
 
 - `TAGLINE` some text rendered right below the logo
 
-- `INTERNET_DEFENSE_LEAGUE` set to `True` if you want to enable the [Internet Defense League](http://internetdefenseleague.org) code
+- `INTERNET_DEFENSE_LEAGUE` set this to `True` if you want to enable the [Internet Defense League](http://internetdefenseleague.org) code
 
 When developing locally, you may want to set the following variable: `SITEURL = http://localhost:8000`
 
