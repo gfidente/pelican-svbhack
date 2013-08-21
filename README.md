@@ -30,6 +30,10 @@ Supports a number of common global variables but patches are welcomed if you nee
 
 - `USER_LOGO_URL` you don't need to replace the logo placeholder, instead put your logo in content/images/your_logo.png and make this point to `SITEURL + '/static/images/your_logo.png'`
 
+- `DISQUS_SITENAME` set this to enable disqus comments in articles
+
+- `COLLAPSE_COMMENTS` set to `True` to have article comments hidden by default. Clicking on the `comments` link will toggle visibility.
+
 - `TAGLINE` some text rendered right below the logo
 
 - `INTERNET_DEFENSE_LEAGUE` set this to `True` if you want to enable the [Internet Defense League](http://internetdefenseleague.org) code

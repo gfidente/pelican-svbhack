@@ -26,10 +26,35 @@
       {% endfor %}
     </p>
     {% endif %}
+    {% if DISQUS_SITENAME %}
+    <p>Comments: <a href="#" onclick="javascript:toggleComments();return false;">toggle</a></p>
+    {% endif %}
   </div>
+
+  {% if DISQUS_SITENAME %}
+    <div id="article_comments" style="display:{%if COLLAPSE_COMMENTS %}none{% else %}block{% endif %}">
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+           var disqus_identifier = "{{ article.url }}";
+           (function() {
+           var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+           dsq.src = 'http://{{ DISQUS_SITENAME }}.disqus.com/embed.js';
+           (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+          })();
+        </script>
+    </div>
+    {% endif %}
+
 </article>
 {% endblock %}
 
 {% block footer %}
 <p><a href="{{ SITEURL }}/" class="button_accent">&larr; Back to Index</a></p>
+<script language="javascript">
+    function toggleComments() {
+        var commentDiv = document.getElementById("article_comments");
+        (commentDiv.style.display == "none") ? commentDiv.style.display = "block" : commentDiv.style.display = "none";
+        return false;
+    }
+</script>
 {% endblock %}
