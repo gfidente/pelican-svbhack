@@ -1,5 +1,5 @@
 {% if DEFAULT_PAGINATION %}
-<p id="paginator">
+<div id="paginator">
 {% if articles_page.has_next() %}
 <a href="{{ SITEURL }}/{{ page_name }}{{ articles_page.next_page_number() }}.html" class="button_accent">&larr; Older Posts</a>
 {% endif %}
@@ -11,5 +11,5 @@
 <a href="{{ SITEURL }}/{{ page_name }}{{ articles_page.previous_page_number() }}.html" class="button_accent">Newer Posts &rarr;</a>
 {% endif %}
 {% endif %}
-</p>
+</div>
 {% endif %}
