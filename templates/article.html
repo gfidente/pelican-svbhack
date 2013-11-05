@@ -11,13 +11,13 @@
 
 {% block content %}
 <article>
-  <div id="article_title">
+  <div class="article_title">
     <h3><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h3>
   </div>
-  <div id="article_text">
+  <div class="article_text">
     {{ article.content }}
   </div>
-  <div id="article_meta">
+  <div class="article_meta">
     <p>Category: <a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a></p>
     {% if article.tags %}
     <p>Tags:

@@ -3,7 +3,7 @@
 
 {% block content %}
 <article>
-  <div id="article_text">
+  <div class="article_text">
     <ul>
       {% for tag in tag_cloud %}
       <li><a href="{{ SITEURL }}/tag/{{ tag.0|string|replace(" ", "-" ) }}.html">{{ tag.0 }}</a></li>
