@@ -3,11 +3,7 @@
 <meta name="keywords" content="{{ article.tags|join(', ')  }}">
 {% endblock %}
 
-{% block title %}{{ article.title }}{% endblock %}
-
-{% block header %}
-<p>Posted on {{ article.locale_date }}</p>
-{% endblock %}
+{% block title %}&ndash; {{ article.title }}{% endblock %}
 
 {% block content %}
 <article>
@@ -18,6 +14,7 @@
     {{ article.content }}
   </div>
   <div class="article_meta">
+    <p>Posted on: {{ article.locale_date }}</p>
     <p>Category: <a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a>
       {% if article.tags %} &ndash; Tags:
       {% for tag in article.tags %}
@@ -42,8 +39,4 @@
   {% endif %}
 
 </article>
-{% endblock %}
-
-{% block footer %}
-<p><a href="{{ SITEURL }}/" class="button_accent">&larr; Back to Index</a></p>
 {% endblock %}

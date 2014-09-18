@@ -7,7 +7,6 @@
   <script src="http://cdnjs.cloudflare.com/ajax/libs/less.js/1.7.3/less.min.js" type="text/javascript"></script>
   -->
   <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/style.css">
-
   <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/pygments.css">
   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=PT+Sans|PT+Serif|PT+Mono">
 
@@ -17,17 +16,18 @@
   <meta name="description" content="Posts and writings by {{ AUTHOR }}">
 
   {% if FEED_ALL_ATOM %}
-  <link href="{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Full Atom Feed" />
+  <link href="{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Atom" />
   {% endif %}
   {% if FEED_ALL_RSS %}
-  <link href="{{ FEED_DOMAIN }}/{{ FEED_ALL_RSS }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} Full RSS Feed" />
+  <link href="{{ FEED_DOMAIN }}/{{ FEED_ALL_RSS }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} RSS" />
   {% endif %}
 
   {% block head %}
   {% endblock %}
 
   <title>
-    {% block title %}{{ SITENAME }}{% endblock %}
+    {{ SITENAME }}
+    {% block title %}{% endblock %}
   </title>
 
   {% include "modules/analytics.html" %}
@@ -64,26 +64,24 @@
 
   <main>
     <header>
-      {% block header %}
       <p>
-      <a href="{{ SITEURL }}">Index</a> &#124; <a href="{{ SITEURL }}/archives.html">Archives</a>
+      <a href="{{ SITEURL }}">Index</a> &brvbar; <a href="{{ SITEURL }}/archives.html">Archives</a>
       {% if FEED_ALL_ATOM %}
-      &#124; <a href="{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}">Atom Feed</a>
+      &brvbar; <a href="{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}">Atom</a>
       {% endif %}
       {% if FEED_ALL_RSS %}
-      &#124; <a href="{{ FEED_DOMAIN }}/{{ FEED_ALL_RSS }}">RSS Feed</a>
+      &brvbar; <a href="{{ FEED_DOMAIN }}/{{ FEED_ALL_RSS }}">RSS</a>
       {% endif %}
-      </p>
+      {% block header %}
       {% endblock header %}
+      </p>
     </header>
 
     {% block content %}
     {% endblock %}
 
-    <footer>
-      {% block footer %}
-      {% endblock %}
-    </footer>
+    {% block footer %}
+    {% endblock %}
 
     <div id="ending_message">
       <p>&copy; {{ AUTHOR }}. Built using <a href="http://getpelican.com" target="_blank">Pelican</a>. Theme by Giulio Fidente on <a href="https://github.com/gfidente/pelican-svbhack" target="_blank">github</a>. {% if INTERNET_DEFENSE_LEAGUE %}Member of the <a href="http://internetdefenseleague.org">Internet Defense League</a>{% endif %}.</p>
