@@ -5,7 +5,7 @@
 <article>
   <div class="article_text">
     <ul>
-      {% for category, articles in categories %}
+      {% for category, articles in categories|sort %}
       <li><a href="{{ SITEURL }}/{{ category.url }}">{{ category }}</a> ({{ articles|count }})</li>
       {% endfor %}
     </ul>
