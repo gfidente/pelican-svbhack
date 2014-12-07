@@ -39,6 +39,10 @@ Para suporte melhor é recomendável que se altere o seguinte.
 
 Quando estiver desenvolvendo algo para o tema é recomendável usar-se `SITEURL = http://localhost:8000`
 
+## POSTAGENS
+
+Para usar imagens no topo de postagens é necessário adicionar `cover: [caminho para a imagem]` no topo de cada postagem, lembrando que o caminho padrão é `content/images`.
+
 ## MODIFICAÇÕES
 
 - Outra cor base pode ser utilizada quando alterado `@accent` em `./static/css/style.less`.
