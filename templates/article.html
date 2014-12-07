@@ -3,40 +3,82 @@
 <meta name="keywords" content="{{ article.tags|join(', ')  }}">
 {% endblock %}
 
-{% block title %}&ndash; {{ article.title }}{% endblock %}
+{% block title %}{{ article.title }}{% endblock %}
+
+{% block header %}
+<p><a href="{{ SITEURL }}/index.html">Início</a> &#124; <a href="{{ SITEURL }}/archives.html">Arquivo</a></p>
+{% endblock %}
 
 {% block content %}
 <article>
   <div class="article_title">
     <h3><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h3>
   </div>
+  <img width="650" src="images/{{ article.cover }}">
   <div class="article_text">
     {{ article.content }}
   </div>
+    
   <div class="article_meta">
-    <p>Posted on: {{ article.locale_date }}</p>
-    <p>Category: <a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a>
-      {% if article.tags %} &ndash; Tags:
+    <p>Postado em {{ article.locale_date }}</p>
+    {% if article.tags %}
+    <p>Tags:
       {% for tag in article.tags %}
       <a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a>{% if not loop.last %},{% endif %}
       {% endfor %}
-      {% endif %}
     </p>
+    {% endif %}
+    {% if DISQUS_SITENAME %}
+    <p>Comentarios: <a href="#" onclick="javascript:toggleComments();return false;">toggle</a></p>
+    {% endif %}
   </div>
 
   {% if DISQUS_SITENAME %}
-  <div id="article_comments">
-    <div id="disqus_thread"></div>
-    <script type="text/javascript">
-        var disqus_identifier = "{{ article.url }}";
-        (function() {
-             var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-             dsq.src = 'http://{{ DISQUS_SITENAME }}.disqus.com/embed.js';
-             (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-         })();
-    </script>
-  </div>
-  {% endif %}
+    <div id="article_comments" style="display:{%if COLLAPSE_COMMENTS %}none{% else %}block{% endif %}">
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+           var disqus_identifier = "{{ article.url }}";
+           (function() {
+           var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+           dsq.src = 'http://{{ DISQUS_SITENAME }}.disqus.com/embed.js';
+           (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+          })();
+        </script>
+    </div>
+    {% endif %}
 
 </article>
+{% endblock %}
+
+{% block footer %}
+<div id="paginator">
+
+            {% for an_article in dates %}
+            {% if an_article.url == article.url %}
+            {% set index = loop.index0 %}
+            {% if not loop.first %}
+            {% set next_article = dates[index-1] %}
+            {% endif %}
+            {% if not loop.last %}
+            {% set previous_article = dates[index+1] %}
+            {% endif %}
+            <nav>
+                {% if previous_article %}
+                <a href="{{ SITEURL }}/{{ previous_article.url }}" class="button_accent">&larr; Posagem anterior</a>
+                {% endif %}
+                {% if next_article %}
+                <a href="{{ SITEURL }}/{{ next_article.url }}" class="button_accent">Postagem posterior &rarr;</a>
+                {% endif %}
+            </nav>
+            {% endif %}
+            {% endfor %}
+</div>
+
+<script language="javascript">
+    function toggleComments() {
+        var commentDiv = document.getElementById("article_comments");
+        (commentDiv.style.display == "none") ? commentDiv.style.display = "block" : commentDiv.style.display = "none";
+        return false;
+    }
+</script>
 {% endblock %}
