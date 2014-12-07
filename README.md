@@ -7,7 +7,7 @@ Essa é a versão em português do tema com algumas alterações, ele usa [pelic
 Você encontra o tema funcionando [aqui](http://soraru.github.io/).
 
 
-![theme screenshot](https://raw.github.com/gfidente/pelican-svbhack/master/screenshot.png)
+![prévia](https://raw.githubusercontent.com/soraru/soraru.github.io/master/pr%C3%A9via.png)
 
 ## MUDANÇAS
 
