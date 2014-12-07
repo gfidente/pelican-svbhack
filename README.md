@@ -1,53 +1,52 @@
 # SVBHACK
 
-pelican-svbhack is a responsive theme for [Pelican](http://getpelican.com), it is my hack of a svbtle-like theme.
+Essa é a versão em português do tema com algumas alterações, ele usa [pelican](http://getpelican.com).
 
 ## DEMO
 
-You can see the [theme in action](http://www.giuliofidente.com/).
+Você encontra o tema funcionando [aqui](http://soraru.github.io/).
+
 
 ![theme screenshot](https://raw.github.com/gfidente/pelican-svbhack/master/screenshot.png)
 
-## FEATURES
+## MUDANÇAS
 
-- responsive
-- syntax highlighting for pre blocks
-- supports google analytics
-- custom list of links
+- grande parte do tema em português
+- melhor navegação de uma postagem para outra
+- mudanças na aparência do tema
 
-## KNOWN ISSUES
+## PROBLEMAS
 
-- no IE testing
-- no custom menu
+- sem testes no IE
 
-## INSTALL
+## INSTALAÇÃo
 
-Clone the [repository](https://github.com/gfidente/pelican-svbhack), edit your `pelicanconf.py` and modify the `THEME` variable to make it point to the downloaded theme location.
+Clone esse fork para o diretório desejado e altere o seu `pelicanconf.py` para usar o tema com `THEME = '[caminho]'`, onde o `[caminho]` é caminho para o diretório onde você fez o download.
 
 ## PELICANCONF.PY
 
-Supports a number of common global variables but patches are welcomed if you need better support.
+Para suporte melhor é recomendável que se altere o seguinte.
 
-- `GOOGLE_ANALYTICS` to use Google Analytics, set this var to your UA-XYZ code
+- `GOOGLE_ANALYTICS` para usar Google Analytics, modifique para usar o seu código UA-XYZ
 
-- `USER_LOGO_URL` to replace the logo placeholder, put your logo in content/images/your_logo.png and make this var point to `SITEURL + '/static/images/your_logo.png'`
+- `USER_LOGO_URL` para alterar o seu logo, coloque seu logo em content/images/your_logo.png e mande apontar para `SITEURL + '/static/images/your_logo.png'`
 
-- `DISQUS_SITENAME` set this to your Disqus sitename to enable disqus comments in articles
+- `DISQUS_SITENAME` ative o Disqus, usando o nome do site para ter comentários
 
-- `TAGLINE` some text rendered right below the logo
+- `TAGLINE` texto que será mostrado logo abaixo do logo
 
-- `INTERNET_DEFENSE_LEAGUE` set this to `True` if you want to enable the [Internet Defense League](http://internetdefenseleague.org) code
+- `INTERNET_DEFENSE_LEAGUE` mude isso para `True` se quiser ativer o código da [Internet Defense League](http://internetdefenseleague.org)
 
-When developing locally, you may want to set the following variable: `SITEURL = http://localhost:8000`
+Quando estiver desenvolvendo algo para o tema é recomendável usar-se `SITEURL = http://localhost:8000`
 
-## MODIFICATIONS
+## MODIFICAÇÕES
 
-- Accent color can be changed by editing `@accent` in `./static/css/style.less`.
-- A different Pygmentize theme can be used by editing `./Makefile` and running `make pygments`.
+- Outra cor base pode ser utilizada quando alterado `@accent` em `./static/css/style.less`.
+- Um tema diferente de Pygmentize pode ser usado editando `./Makefile` e executando `make pygments`.
 
-## AUTHOR
+## AUTOR
 
-pelican-svbhack is authored by Giulio Fidente.
+pelican-svbhack foi feito por Giulio Fidente.
 
 ## LICENSE
 
