@@ -1,22 +1,21 @@
 {% extends "base.html" %}
+{% block title %}{{ page.title }}{% endblock %}
+
+{% block header %}
+<p>Atualizado em {{ page.locale_date }}</p>
+{% endblock %}
+
 {% block content %}
-{% for article in articles_page.object_list %}
 <article>
   <div class="article_title">
-    <h3><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h3>
+    <h3><a href="{{ SITEURL }}/{{ page.url }}">{{ page.title }}</a></h3>
   </div>
   <div class="article_text">
-    {{ article.summary }}
+    {{ page.content }}
   </div>
 </article>
-{% if not loop.last %}
-<hr />
-{% endif %}
-{% endfor %}
 {% endblock %}
 
 {% block footer %}
-<footer>
-  {% include "modules/pagination.html" %}
-</footer>
+<p><a href="{{ SITEURL }}/" class="button_accent">&larr; Página inicial</a></p>
 {% endblock %}
