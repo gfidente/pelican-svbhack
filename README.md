@@ -1,6 +1,7 @@
 # SVBHACK
 
 Essa é a versão em português do tema com algumas alterações, ele usa [pelican](http://getpelican.com).
+O original pode ser encontrado [aqui](https://github.com/gfidente/pelican-svbhack).
 
 ## DEMO
 
