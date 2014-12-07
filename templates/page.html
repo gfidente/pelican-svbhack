@@ -1,5 +1,9 @@
 {% extends "base.html" %}
-{% block title %}&ndash; {{ page.title }}{% endblock %}
+{% block title %}{{ page.title }}{% endblock %}
+
+{% block header %}
+<p>Atualizado em {{ page.locale_date }}</p>
+{% endblock %}
 
 {% block content %}
 <article>
@@ -9,8 +13,9 @@
   <div class="article_text">
     {{ page.content }}
   </div>
-  <div class="article_meta">
-    <p>Updated on: {{ page.locale_date }}</p>
-  </div>
 </article>
+{% endblock %}
+
+{% block footer %}
+<p><a href="{{ SITEURL }}/" class="button_accent">&larr; Página inicial</a></p>
 {% endblock %}
