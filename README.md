@@ -20,7 +20,7 @@ Você encontra o tema funcionando [aqui](http://soraru.github.io/).
 
 - sem testes no IE
 
-## INSTALAÇÃo
+## INSTALAÇÃO
 
 Clone esse fork para o diretório desejado e altere o seu `pelicanconf.py` para usar o tema com `THEME = '[caminho]'`, onde o `[caminho]` é caminho para o diretório onde você fez o download.
 
