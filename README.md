@@ -8,7 +8,7 @@ O original pode ser encontrado [aqui](https://github.com/gfidente/pelican-svbhac
 Você encontra o tema funcionando [aqui](http://soraru.github.io/).
 
 
-![prévia](https://raw.githubusercontent.com/soraru/soraru.github.io/master/pr%C3%A9via.png)
+![prévia](https://raw.githubusercontent.com/soraru/pelican-svbhack/master/screenshot.png)
 
 ## MUDANÇAS
 
