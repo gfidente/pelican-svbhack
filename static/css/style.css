@@ -84,6 +84,11 @@ main article div.article_text pre {
   line-height: 1.125em;
   overflow-x: auto;
 }
+main article div.article_text .mona {
+  font-family: Mona, MS PGothic, Mincho, Gothic;
+  background-color: #F0FFFF;
+  border: 0.1em solid #eeeeee;
+}
 main article div.article_text blockquote {
   margin: 22px 2px 22px 2px;
   padding-left: 40px;
