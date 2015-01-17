@@ -59,6 +59,9 @@ main article {
   max-width: 640px;
   padding: 40px;
 }
+main article img {
+  width: 100%;
+}
 main article div.article_text {
   line-height: 1.375em;
 }

@@ -1,15 +1,18 @@
 {% extends "base.html" %}
-{% block title %}Arquivos{% endblock %}
+{% block title %}Arquivo{% endblock %}
 
 {% block content %}
 <article>
   <div class="article_text">
-    <dl>
+      <dl>
       {% for article in dates %}
-      <dt>{{ article.locale_date }}</dt>
-      <dd><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></dd>
+      <dd><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a>		({{ article.locale_date }})<br></dd>
       {% endfor %}
-    </dl>
+      </dl>
   </div>
 </article>
+{% endblock %}
+
+{% block footer %}
+<img src="{{ SITEURL }}/theme/images/vsf.jpg">
 {% endblock %}

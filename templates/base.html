@@ -36,16 +36,18 @@
 <body>
   <aside>
     <div id="user_meta">
-      <a href="{{ SITEURL }}">
+      <a href="{{ SITEURL }}/index.html">
         {% if USER_LOGO_URL %}
         <img src="{{ USER_LOGO_URL }}" alt="logo">
         {% else %}
         <img src="{{ SITEURL }}/theme/images/logo.jpg" alt="meme-chan te ama">
         {% endif %}
       </a>
-      <h2><a href="{{ SITEURL }}">{{ AUTHOR }}</a></h2>
+      <h2><a href="{{ SITEURL }}/index.html">{{ AUTHOR }}</a></h2>
       <p>{{ TAGLINE }}</p>
       <ul>
+        <li><a href="{{ SITEURL }}/index.html">Início</a></li>
+        <li><a href="{{ SITEURL }}/archives.html">Arquivo</a></li>
         {% for title, link in MENUITEMS %}
         <li><a href="{{ link }}">{{ title }}</a></li>
         {% endfor %}
@@ -60,7 +62,7 @@
   </aside>
 
   <main>
-    <header>
+<!--  <header>
       {% block header %}
       <p>
       <a href="{{ SITEURL }}/index.html">Início</a> &#124; <a href="{{ SITEURL }}/archives.html">Arquivo</a>
@@ -72,7 +74,7 @@
       {% endif %}
       </p>
       {% endblock header %}
-    </header>
+    </header> -->
 
     {% block content %}
     {% endblock %}
