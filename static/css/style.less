@@ -9,6 +9,7 @@
 @sans: 'PT Sans', sans-serif;
 @serif: 'PT Serif', serif;
 @mono: 'PT Mono', monospace;
+@mona: Mona, MS\ PGothic, Mincho, Gothic; 
 
 body {
   margin: 0;
@@ -124,9 +125,22 @@ main {
       }
     
       .mona {
-        font-family: Mona, MS PGothic, Mincho, Gothic; 
-        background-color: #F0FFFF;
+        font-family: @mona !important; 
         border: 0.1em solid @light-grey;
+        padding: 5px 15px 5px 15px;
+        border: 3px solid @light-grey;
+        .border-radius(15px);
+        color: @med-grey;
+        
+            pre {
+                font-family: @mona !important;
+                margin: 0;
+                padding: 0;
+                color: @med-grey;
+                border: none;
+                background: none;
+            }
+
       }
 
       blockquote {

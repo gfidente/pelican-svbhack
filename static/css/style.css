@@ -88,9 +88,22 @@ main article div.article_text pre {
   overflow-x: auto;
 }
 main article div.article_text .mona {
-  font-family: Mona, MS PGothic, Mincho, Gothic;
-  background-color: #F0FFFF;
+  font-family: Mona, MS\ PGothic, Mincho, Gothic !important;
   border: 0.1em solid #eeeeee;
+  padding: 5px 15px 5px 15px;
+  border: 3px solid #eeeeee;
+  border-radius: 15px;
+  -moz-border-radius: 15px;
+  -webkit-border-radius: 15px;
+  color: #999999;
+}
+main article div.article_text .mona pre {
+  font-family: Mona, MS\ PGothic, Mincho, Gothic !important;
+  margin: 0;
+  padding: 0;
+  color: #999999;
+  border: none;
+  background: none;
 }
 main article div.article_text blockquote {
   margin: 22px 2px 22px 2px;
