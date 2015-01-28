@@ -18,6 +18,7 @@ a.button_link {
   -webkit-border-radius: 15px;
   color: #999999;
   text-decoration: none !important;
+  font-size: 16px;
 }
 hr {
   color: #eeeeee;
