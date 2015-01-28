@@ -10,6 +10,15 @@ a {
   color: #000000;
   text-decoration: none;
 }
+a.button_link {
+  padding: 5px 15px 5px 15px;
+  border: 3px solid #eeeeee;
+  border-radius: 15px;
+  -moz-border-radius: 15px;
+  -webkit-border-radius: 15px;
+  color: #999999;
+  text-decoration: none !important;
+}
 hr {
   color: #eeeeee;
   background-color: #eeeeee;
@@ -39,14 +48,6 @@ aside div#user_meta ul {
 aside div#user_meta ul li {
   display: inline;
   line-height: 3em;
-}
-aside div#user_meta ul li a {
-  padding: 5px 15px 5px 15px;
-  border: 3px solid #eeeeee;
-  border-radius: 15px;
-  -moz-border-radius: 15px;
-  -webkit-border-radius: 15px;
-  color: #999999;
 }
 main header {
   padding: 40px;
