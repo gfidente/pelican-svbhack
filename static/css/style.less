@@ -23,16 +23,17 @@ a {
   color: @black;
   text-decoration: none;
 
-  &.button_link {
-    padding: 5px 15px 5px 15px;
-    border: 3px solid @light-grey;
-    .border-radius(15px);
-    color: @med-grey;
-    text-decoration: none !important;
-    font-size: 16px;
-  }
 }
 
+.button_link {
+  color: @black;
+  padding: 5px 15px 5px 15px;
+  border: 3px solid @light-grey;
+  .border-radius(15px);
+  color: @med-grey;
+  text-decoration: none !important;
+  font-size: 16px;
+}
 
 hr {
   color: @light-grey;
@@ -74,6 +75,10 @@ aside {
       li {
         display: inline;
         line-height: 3em;
+
+        a {
+          .button_link;
+        }
       }
     }
   }

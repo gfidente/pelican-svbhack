@@ -10,7 +10,8 @@ a {
   color: #000000;
   text-decoration: none;
 }
-a.button_link {
+.button_link {
+  color: #000000;
   padding: 5px 15px 5px 15px;
   border: 3px solid #eeeeee;
   border-radius: 15px;
@@ -49,6 +50,17 @@ aside div#user_meta ul {
 aside div#user_meta ul li {
   display: inline;
   line-height: 3em;
+}
+aside div#user_meta ul li a {
+  color: #000000;
+  padding: 5px 15px 5px 15px;
+  border: 3px solid #eeeeee;
+  border-radius: 15px;
+  -moz-border-radius: 15px;
+  -webkit-border-radius: 15px;
+  color: #999999;
+  text-decoration: none !important;
+  font-size: 16px;
 }
 main header {
   padding: 40px;
