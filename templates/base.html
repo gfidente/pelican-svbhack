@@ -42,13 +42,10 @@
         {% else %}
         <img src="{{ SITEURL }}/theme/images/logo.png" alt="logo">
         {% endif %}
-      </a>
-      <h2><a href="{{ SITEURL }}">{{ AUTHOR }}</a></h2>
-      <p>{{ TAGLINE }}</p>
-      <ul>
-        {% for title, link in MENUITEMS %}
-        <li><a href="{{ link }}">{{ title }}</a></li>
-        {% endfor %}
+        </a>
+        <h2><a href="{{ SITEURL }}">{{ AUTHOR }}</a></h2>
+        <p>{{ TAGLINE }}</p>
+        <ul>
         {% if DISPLAY_PAGES_ON_MENU %}{% for p in pages %}
         <li><a href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a></li>
         {% endfor %}{% endif %}
@@ -63,6 +60,24 @@
   </aside>
 
   <main>
+
+  {% if MAIN_MENU %}
+    <header>
+      <p>
+        <a href="{{ SITEURL }}">/ Home</a> /
+        {% for title, link in MENUITEMS %}
+        <a href="{{ link }}">{{ title }}</a> /
+        {% endfor %}
+        {% if FEED_ALL_ATOM %}
+        <a href="{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}">Atom</a>
+        {% endif %}
+        {% if FEED_ALL_RSS %}
+        <a href="{{ FEED_DOMAIN }}/{{ FEED_ALL_RSS }}">RSS</a>
+        {% endif %}
+        </p>
+    </header>
+    {% endif %}
+<!--
     <header>
       <p>
       <a href="{{ SITEURL }}">Index</a> &brvbar; <a href="{{ SITEURL }}/archives.html">Archives</a>
@@ -76,7 +91,7 @@
       {% endblock header %}
       </p>
     </header>
-
+-->
     {% block content %}
     {% endblock %}
 
