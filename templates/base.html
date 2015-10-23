@@ -10,7 +10,10 @@
   <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/pygments.css">
   <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=PT+Sans|PT+Serif|PT+Mono">
   <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/font-awesome.min.css">
-
+  {% if FAVICON %}
+  <link rel="shortcut icon" href="{{ FAVICON }}" type="image/x-icon">
+  <link rel="icon" href="{{ FAVICON }}" type="image/x-icon">
+  {% endif %}
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="author" content="{{ AUTHOR }}">
