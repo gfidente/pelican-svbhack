@@ -42,11 +42,11 @@ aside div#user_meta ul li {
 }
 aside div#user_meta ul li a {
   padding: 5px 15px 5px 15px;
-  border: 3px solid #eeeeee;
+  border: 0px;
   border-radius: 15px;
   -moz-border-radius: 15px;
   -webkit-border-radius: 15px;
-  color: #999999;
+  color: #ffffff;
 }
 main header {
   padding: 40px;
@@ -145,7 +145,7 @@ main div#ending_message {
     text-align: right;
   }
   aside div#user_meta ul li {
-    display: block;
+    display: inline;
   }
   main {
     width: 75%;
@@ -161,4 +161,68 @@ main div#ending_message {
   main header {
     border-top: 0;
   }
+}
+
+.social ul {
+  display:flex;
+}
+
+.gray_background {
+  background-color: #eeeeee;
+}
+
+ul.social {
+  list-style-type: none;
+  font-size: 1.6em;
+  margin: 0;
+  padding: 0;
+}
+
+.social {
+  display: inline;
+}
+
+a.sc-facebook {
+    background-color: #3e5b98;
+  }
+
+  a.sc-google {
+    background-color: #d93e2d;
+  }
+
+  a.sc-pinterest {
+    background-color: #c92619;
+  }
+
+  a.sc-linkedin {
+    background-color: #3371b7;
+  }
+
+  a.sc-rss {
+    background-color: #f26109;
+  }
+
+  a.sc-stack-overflow {
+    background-color: #ff9900;
+  }
+
+  a.sc-twitter {
+    background-color: #4da7de;
+  }
+
+  a.sc-youtube {
+    background-color: #e02a20;
+  }
+
+  a.sc-github, a.sc-github-alt {
+    background-color: #111010;
+  }
+
+  a.sc-envelope-o {
+    background-color: #578AD6;
+  }
+}
+
+.white {
+  color:#ffffff;
 }

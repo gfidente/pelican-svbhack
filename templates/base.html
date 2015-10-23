@@ -9,6 +9,7 @@
   <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/style.css">
   <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/pygments.css">
   <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=PT+Sans|PT+Serif|PT+Mono">
+  <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/font-awesome.min.css">
 
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -34,7 +35,7 @@
 </head>
 
 <body>
-  <aside>
+  <aside class="gray_background">
     <div id="user_meta">
       <a href="{{ SITEURL }}">
         {% if USER_LOGO_URL %}
@@ -52,9 +53,11 @@
         {% for name, link in LINKS %}
         <li><a href="{{ link }}" target="_blank">{{ name }}</a></li>
         {% endfor %}
+        <ul class="social">
         {% for name, link in SOCIAL %}
-        <li><a href="{{ link }}" target="_blank">{{ name }}</a></li>
+        <li><a class="sc-{{ name }} white" href="{{ link }}" target="_blank"><i class="fa fa-{{ name }}"></i></a></li>
         {% endfor %}
+        </ul>
       </ul>
     </div>
   </aside>
