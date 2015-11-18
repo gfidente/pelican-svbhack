@@ -21,8 +21,13 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="author" content="{{ AUTHOR }}">
-  <meta name="description" content="Posts and writings by {{ AUTHOR }}">
-
+  <meta name="description" content="Posts and writings by {{ AUTHOR }}. {{ TAGLINE }}">
+  {% if META_IMAGE %}
+  <meta property="og:image" content="{{ META_IMAGE }}" />
+  <meta property="og:image:type" content="{{ META_IMAGE_TYPE }}" />
+  <meta name="twitter:image" content="{{ META_IMAGE }}" />
+  <meta itemprop="image" content="{{ META_IMAGE }}" />
+  {% endif %}
   {% if FEED_ALL_ATOM %}
   <link href="{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Atom" />
   {% endif %}
