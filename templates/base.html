@@ -34,36 +34,9 @@
 </head>
 
 <body>
-  <aside>
-    <div id="user_meta">
-      <a href="{{ SITEURL }}">
-        {% if USER_LOGO_URL %}
-        <img src="{{ USER_LOGO_URL }}" alt="logo">
-        {% else %}
-        <img src="{{ SITEURL }}/theme/images/logo.png" alt="logo">
-        {% endif %}
-      </a>
-      <h2><a href="{{ SITEURL }}">{{ AUTHOR }}</a></h2>
-      <p>{{ TAGLINE }}</p>
-      <ul>
-        {% for title, link in MENUITEMS %}
-        <li><a href="{{ link }}">{{ title }}</a></li>
-        {% endfor %}
-        {% if DISPLAY_PAGES_ON_MENU %}{% for p in pages %}
-        <li><a href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a></li>
-        {% endfor %}{% endif %}
-        {% for name, link in LINKS %}
-        <li><a href="{{ link }}" target="_blank">{{ name }}</a></li>
-        {% endfor %}
-        {% for name, link in SOCIAL %}
-        <li><a href="{{ link }}" target="_blank">{{ name }}</a></li>
-        {% endfor %}
-      </ul>
-    </div>
-  </aside>
-
   <main>
     <header>
+      <h1><a href="{{ SITEURL }}">{{ SITENAME }}</a></h1>
       <p>
       <a href="{{ SITEURL }}">Index</a> &brvbar; <a href="{{ SITEURL }}/archives.html">Archives</a>
       {% if FEED_ALL_ATOM %}
@@ -83,10 +56,37 @@
     {% block footer %}
     {% endblock %}
 
+    <footer>
+      <div id="user_meta">
+        <div class="author_logo">
+          <a href="{{ SITEURL }}/pages/about.html">
+            {% if USER_LOGO_URL %}
+            <img src="{{ USER_LOGO_URL }}" alt="logo">
+            {% else %}
+            <img src="{{ SITEURL }}/theme/images/logo.png" alt="logo">
+            {% endif %}
+          </a>
+        </div>
+        <div class="author_text">
+          <h4><a href="{{ SITEURL }}">{{ AUTHOR }}</a></h2>
+          <p>{{ TAGLINE }}</p>
+          <ul>
+            {% if DISPLAY_PAGES_ON_MENU %}{% for p in pages %}
+            <li><a href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a></li>
+            {% endfor %}{% endif %}
+            {% for name, link in LINKS %}
+            <li><a href="{{ link }}" target="_blank">{{ name }}</a></li>
+            {% endfor %}
+            {% for name, link in SOCIAL %}
+            <li><a href="{{ link }}" target="_blank">{{ name }}</a></li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+    </footer>
     <div id="ending_message">
       <p>&copy; {{ AUTHOR }}. Built using <a href="http://getpelican.com" target="_blank">Pelican</a>. Theme by Giulio Fidente on <a href="https://github.com/gfidente/pelican-svbhack" target="_blank">github</a>. {% if INTERNET_DEFENSE_LEAGUE %}Member of the <a href="http://internetdefenseleague.org">Internet Defense League</a>.{% endif %}</p>
     </div>
   </main>
-  {% include "modules/idl.html" %}
 </body>
 </html>
