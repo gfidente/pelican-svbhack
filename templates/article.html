@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% block head %}
 <meta name="keywords" content="{{ article.tags|join(', ')  }}">
+{% include "modules/facebook-sdk-import.html" %}
 {% endblock %}
 
 {% block title %}&ndash; {{ article.title }}{% endblock %}
@@ -23,7 +24,7 @@
       {% endif %}
     </p>
   </div>
-
+  {% include "modules/sosial_tools.html" %}
   {% if DISQUS_SITENAME %}
   <div id="article_comments">
     <div id="disqus_thread"></div>
