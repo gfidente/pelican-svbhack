@@ -1,0 +1,16 @@
+{% if GOOGLE_ADSENSE_CLIENT and GOOGLE_ADSENSE_SLOT %}
+<!-- Google Adsense (responsive) -->
+<div class="adsense">
+   <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+     <ins class="adsbygoogle"
+          style="display:block"
+          data-ad-client="{{ GOOGLE_ADSENSE_CLIENT }}"
+          data-ad-slot="{{ GOOGLE_ADSENSE_SLOT }}"
+          data-ad-format="auto">
+     </ins>
+   <script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+   </script>
+</div>
+<!-- Google Adsense (responsive) END -->
+{% endif %}
