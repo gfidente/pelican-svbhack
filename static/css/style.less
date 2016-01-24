@@ -19,6 +19,10 @@ body {
   font-size: 18px;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  padding-top: 40px;
+}
+
 a {
   color: @black;
   text-decoration: none;
@@ -91,15 +95,21 @@ main {
 
   article {
     max-width: 640px;
-    padding: 40px;
+    padding-left: 40px;
+    padding-bottom: 40px;
 
     div.article_title {
     }
 
     div.article_text {
       line-height: 1.375em;
+      
+      .toc-backref {
+        border-bottom: 0px;
+      }
+      
       a {
-        text-decoration: underline;
+        border-bottom: 1px dotted #BBB;
       }
 
       code {

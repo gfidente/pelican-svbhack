@@ -6,6 +6,9 @@ body {
   font-family: 'PT Sans', sans-serif;
   font-size: 18px;
 }
+h1, h2, h3, h4, h5, h6 {
+  padding-top: 40px;
+}
 a {
   color: #000000;
   text-decoration: none;
@@ -60,13 +63,17 @@ main header p {
 }
 main article {
   max-width: 640px;
-  padding: 40px;
+  padding-left: 40px;
+  padding-bottom: 40px;
 }
 main article div.article_text {
   line-height: 1.375em;
 }
 main article div.article_text a {
-  text-decoration: underline;
+  border-bottom: 1px dotted #BBB;
+}
+main article div.article_text .toc-backref {
+  border-bottom: 0px;
 }
 main article div.article_text code {
   margin: 2px;

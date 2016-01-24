@@ -8,7 +8,7 @@
 {% block content %}
 <article>
   <div class="article_title">
-    <h3><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h3>
+    <h1><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h1>
   </div>
   <div class="article_text">
     {{ article.content }}
@@ -24,19 +24,8 @@
     </p>
   </div>
 
-  {% if DISQUS_SITENAME %}
-  <div id="article_comments">
-    <div id="disqus_thread"></div>
-    <script type="text/javascript">
-        var disqus_identifier = "{{ article.url }}";
-        (function() {
-             var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-             dsq.src = 'http://{{ DISQUS_SITENAME }}.disqus.com/embed.js';
-             (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-         })();
-    </script>
-  </div>
-  {% endif %}
+  {% include "modules/remarkbox.html" %}
+  {% include "modules/disqus.html" %}
 
 </article>
 {% endblock %}
