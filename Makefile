@@ -9,4 +9,4 @@
 STYLE = default
 
 pygments:
-	pygmentize -S ${STYLE} -f html > ./static/css/pygments.css
+	pygmentize -S ${STYLE} -f html -a ".highlight pre" > ./static/css/pygments.css
