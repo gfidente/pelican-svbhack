@@ -124,6 +124,10 @@ footer div#user_meta ul li a {
   -webkit-border-radius: 15px;
   color: #999999;
 }
+footer div#user_meta .author_logo img {
+  max-width: 100px;
+  max-height: 100px;
+}
 footer div#ending_message {
   border-top: #eeeeee 1px solid;
   padding: 0 40px 0 40px;
