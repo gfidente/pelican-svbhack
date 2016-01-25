@@ -20,6 +20,27 @@ img {
   max-width: 100%;
   height: auto;
 }
+.pagination {
+  margin: 1% 10%;
+}
+.pagination a.button_accent {
+  padding: 10px;
+  border: 2px solid #0e94ec;
+  border-radius: 20px;
+  -moz-border-radius: 20px;
+  -webkit-border-radius: 20px;
+  text-transform: uppercase;
+  color: #0e94ec;
+  font-size: 18px;
+}
+.pagination a.button_accent:hover {
+  color: #ffffff;
+  background-color: #0e94ec;
+}
+.pagination a.button_accent:active {
+  color: #ffffff;
+  background-color: #0e94ec;
+}
 main {
   margin-left: auto;
   margin-right: auto;
@@ -46,22 +67,21 @@ main article div.article_text a {
 }
 main article div.article_text code {
   margin: 2px;
-  padding: 0;
+  padding: 4px;
   color: #000000;
-  font-size: 14px;
+  font-size: 15px;
   font-family: 'Source Code Pro,', monospace;
   background: #eeeeee;
 }
 main article div.article_text pre {
   margin: 22px 2px 22px 2px;
-  padding: 2px;
-  color: #000000;
-  border-left: 3px solid #0e94ec;
-  font-size: 14px;
+  padding: 9.5px;
+  font-size: 15px;
   font-family: 'Source Code Pro,', monospace;
-  background: #eeeeee;
-  line-height: 1.125em;
+  line-height: 1.25em;
   overflow-x: auto;
+  border-style: none;
+  border-radius: 4px;
 }
 main article div.article_text blockquote {
   margin: 22px 2px 22px 2px;
@@ -76,45 +96,27 @@ main article div.article_meta {
   font-size: 12px;
   color: #999999;
 }
-main footer a.button_accent {
-  padding: 10px;
-  border: 2px solid #0e94ec;
-  border-radius: 20px;
-  -moz-border-radius: 20px;
-  -webkit-border-radius: 20px;
-  text-transform: uppercase;
-  color: #0e94ec;
-  font-size: 18px;
-}
-main footer a.button_accent:hover {
-  color: #ffffff;
-  background-color: #0e94ec;
-}
-main footer a.button_accent:active {
-  color: #ffffff;
-  background-color: #0e94ec;
-}
-main footer div#user_meta {
+footer div#user_meta {
   text-align: center;
 }
-main footer div#user_meta h2 {
+footer div#user_meta h2 {
   margin: 15px 0 5px 0;
 }
-main footer div#user_meta p {
+footer div#user_meta p {
   margin: 0 0 15px 0;
   font-size: 14px;
 }
-main footer div#user_meta ul {
+footer div#user_meta ul {
   margin: 40px 0 0 0;
   padding-left: 0;
   font-size: 16px;
   list-style-type: none;
 }
-main footer div#user_meta ul li {
+footer div#user_meta ul li {
   display: inline;
   line-height: 3em;
 }
-main footer div#user_meta ul li a {
+footer div#user_meta ul li a {
   padding: 5px 15px 5px 15px;
   border: 3px solid #eeeeee;
   border-radius: 15px;
@@ -122,7 +124,11 @@ main footer div#user_meta ul li a {
   -webkit-border-radius: 15px;
   color: #999999;
 }
-main div#ending_message {
+footer div#user_meta .author_logo img {
+  max-width: 100px;
+  max-height: 100px;
+}
+footer div#ending_message {
   border-top: #eeeeee 1px solid;
   padding: 0 40px 0 40px;
   color: #999999;
@@ -142,38 +148,37 @@ main div#ending_message {
 #___plusone_0 {
   width: 75px!important;
 }
+img {
+  max-width: 650px;
+  max-height: 650px;
+}
 @media screen and (min-width: 1024px) {
-  img {
-    max-width: 650px;
-    max-height: 650px;
-  }
   main {
-    width: 75%;
+    width: 100%;
     top: 0;
     left: 25%;
     overflow-x: hidden;
     overflow-y: hidden;
   }
   main article {
-    max-width: 100%;
+    max-width: 75%;
+    margin-left: 10%;
+    margin-right: 10%;
   }
   main header {
     border-top: 0;
   }
   footer {
     width: 100%;
-    height: 100%;
     border-right: #eeeeee 1px solid;
     margin-bottom: auto;
+    position: absolute;
   }
   footer h2 {
     margin: 10px 0 0 0;
   }
   footer div#user_meta {
     margin-top: 5%;
-  }
-  footer div#user_meta ul li {
-    display: block;
   }
   footer div#user_meta .author_logo {
     float: left;

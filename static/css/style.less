@@ -5,6 +5,7 @@
 @med-grey:  #999999;
 @dark-grey:  #4d4d4d;
 @blue:  #0e94ec;
+@deep-orage: #ff5722;
 @accent:  @blue;
 @sans: 'PT Sans', sans-serif;
 @serif: 'PT Serif', serif;
@@ -42,6 +43,27 @@ img {
   height: auto;
 }
 
+.pagination {
+    margin: 1% 10%;
+
+    a.button_accent {
+      padding: 10px;
+      border: 2px solid @accent;
+      .border-radius(20px);
+      text-transform: uppercase;
+      color: @accent;
+      font-size: 18px;
+      &:hover {
+        color: @white;
+        background-color: @accent;
+      }
+      &:active {
+        color: @white;
+        background-color: @accent;
+      }
+    }
+}
+
 main {
   margin-left: auto;
   margin-right: auto;
@@ -50,6 +72,9 @@ main {
     padding: 40px;
     border-top: @light-grey 1px solid;
     border-bottom: @light-grey 1px solid;
+
+    .site_name {
+    }
 
     p {
       font-weight: bold;
@@ -73,23 +98,22 @@ main {
 
       code {
         margin: 2px;
-        padding: 0;
+        padding: 4px;
         color: @black;
-        font-size: 14px;
+        font-size: 15px;
         font-family: @mono;
         background: @light-grey;
       }
 
       pre {
         margin: 22px 2px 22px 2px;
-        padding: 2px;
-        color: @black;
-        border-left: 3px solid @accent;
-        font-size: 14px;
+        padding: 9.5px;
+        font-size: 15px;
         font-family: @mono;
-        background: @light-grey;
-        line-height: 1.125em;
+        line-height: 1.25em;
         overflow-x: auto;
+        border-style: none;
+        border-radius: 4px;
       }
 
       blockquote {
@@ -109,58 +133,48 @@ main {
       color: @med-grey;
     }
   }
+}
 
-  footer {
+footer {
 
-    a.button_accent {
-      padding: 10px;
-      border: 2px solid @accent;
-      .border-radius(20px);
-      text-transform: uppercase;
-      color: @accent;
-      font-size: 18px;
-      &:hover {
-        color: @white;
-        background-color: @accent;
-      }
-      &:active {
-        color: @white;
-        background-color: @accent;
-      }
+  div#paginator {
+  }
+
+  div#user_meta {
+    text-align: center;
+
+    h2 {
+      margin: 15px 0 5px 0;
     }
 
-    div#paginator {
+    p {
+      margin: 0 0 15px 0;
+      font-size: 14px;
     }
 
-    div#user_meta {
-      text-align: center;
+    ul {
+      margin: 40px 0 0 0;
+      padding-left: 0;
+      font-size: 16px;
+      list-style-type: none;
 
-      h2 {
-        margin: 15px 0 5px 0;
-      }
+      li {
+        display: inline;
+        line-height: 3em;
 
-      p {
-        margin: 0 0 15px 0;
-        font-size: 14px;
-      }
-
-      ul {
-        margin: 40px 0 0 0;
-        padding-left: 0;
-        font-size: 16px;
-        list-style-type: none;
-
-        li {
-          display: inline;
-          line-height: 3em;
-
-          a {
-            padding: 5px 15px 5px 15px;
-            border: 3px solid @light-grey;
-            .border-radius(15px);
-            color: @med-grey;
-          }
+        a {
+          padding: 5px 15px 5px 15px;
+          border: 3px solid @light-grey;
+          .border-radius(15px);
+          color: @med-grey;
         }
+      }
+    }
+
+    .author_logo {
+      img {
+        max-width: 100px;
+        max-height: 100px;
       }
     }
   }
@@ -172,6 +186,7 @@ main {
     font-size: 10px;
   }
 }
+
 
 .fb_iframe_widget > span {
   vertical-align: baseline !important;
@@ -191,20 +206,23 @@ main {
   width   : 75px!important;
 }
 
+img {
+  max-width: 650px;
+  max-height: 650px;
+}
+
 @media screen and (min-width: 1024px) {
-  img {
-    max-width: 650px;
-    max-height: 650px;
-  }
   main {
-    width: 75%;
+    width: 100%;
     top: 0;
     left: 25%;
     overflow-x: hidden;
     overflow-y: hidden;
 
     article {
-      max-width: 100%;
+      max-width: 75%;
+      margin-left: 10%;
+      margin-right: 10%;
     }
 
     header {
@@ -214,9 +232,9 @@ main {
 
   footer {
     width: 100%;
-    height: 100%;
     border-right: @light-grey 1px solid;
     margin-bottom: auto;
+    position: absolute;
 
     h2 {
       margin: 10px 0 0 0;
@@ -224,11 +242,6 @@ main {
 
     div#user_meta {
       margin-top: 5%;
-      ul {
-        li {
-          display: block;
-        }
-      }
 
       .author_logo {
         float: left;
