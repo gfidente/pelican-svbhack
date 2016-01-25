@@ -1,28 +1,14 @@
-# SVBHACK
+# SVBHACK (forked version by @laughk)
 
-pelican-svbhack is a responsive theme for [Pelican](http://getpelican.com), it is my hack of a svbtle-like theme.
+responsive theme for [Pelican](http://getpelican.com), it is my hack of a [gfidente/pelican-svbhack](https://github.com/gfidente/pelican-svbhack) theme.
 
-## DEMO
+## Screenshot
 
-You can see the [theme in action](http://www.giuliofidente.com/).
-
-![theme screenshot](https://raw.github.com/gfidente/pelican-svbhack/master/screenshot.png)
-
-## FEATURES
-
-- responsive
-- syntax highlighting for pre blocks
-- supports google analytics
-- custom list of links
-
-## KNOWN ISSUES
-
-- no IE testing
-- no custom menu
+![theme screenshot](screenshot.png)
 
 ## INSTALL
 
-Clone the [repository](https://github.com/gfidente/pelican-svbhack), edit your `pelicanconf.py` and modify the `THEME` variable to make it point to the downloaded theme location.
+Clone the [repository](https://github.com/laughk/pelican-svbhack), edit your `pelicanconf.py` and modify the `THEME` variable to make it point to the downloaded theme location.
 
 ## PELICANCONF.PY
 
@@ -36,7 +22,7 @@ Supports a number of common global variables but patches are welcomed if you nee
 
 - `TAGLINE` some text rendered right below the logo
 
-- `INTERNET_DEFENSE_LEAGUE` set this to `True` if you want to enable the [Internet Defense League](http://internetdefenseleague.org) code
+and so on. (sorry coming soon)
 
 When developing locally, you may want to set the following variable: `SITEURL = http://localhost:8000`
 
@@ -47,7 +33,7 @@ When developing locally, you may want to set the following variable: `SITEURL = 
 
 ## AUTHOR
 
-pelican-svbhack is authored by Giulio Fidente.
+Kei Iwasaki.
 
 ## LICENSE
 
