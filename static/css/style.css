@@ -20,6 +20,28 @@ img {
   max-width: 100%;
   height: auto;
 }
+.pagination {
+  margin-left: 10%;
+  margin-right: 10%;
+}
+.pagination a.button_accent {
+  padding: 10px;
+  border: 2px solid #0e94ec;
+  border-radius: 20px;
+  -moz-border-radius: 20px;
+  -webkit-border-radius: 20px;
+  text-transform: uppercase;
+  color: #0e94ec;
+  font-size: 18px;
+}
+.pagination a.button_accent:hover {
+  color: #ffffff;
+  background-color: #0e94ec;
+}
+.pagination a.button_accent:active {
+  color: #ffffff;
+  background-color: #0e94ec;
+}
 main {
   margin-left: auto;
   margin-right: auto;
@@ -76,24 +98,6 @@ main article div.article_meta {
   font-size: 12px;
   color: #999999;
 }
-main footer a.button_accent {
-  padding: 10px;
-  border: 2px solid #0e94ec;
-  border-radius: 20px;
-  -moz-border-radius: 20px;
-  -webkit-border-radius: 20px;
-  text-transform: uppercase;
-  color: #0e94ec;
-  font-size: 18px;
-}
-main footer a.button_accent:hover {
-  color: #ffffff;
-  background-color: #0e94ec;
-}
-main footer a.button_accent:active {
-  color: #ffffff;
-  background-color: #0e94ec;
-}
 main footer div#user_meta {
   text-align: center;
 }
@@ -148,14 +152,16 @@ main div#ending_message {
     max-height: 650px;
   }
   main {
-    width: 75%;
+    width: 100%;
     top: 0;
     left: 25%;
     overflow-x: hidden;
     overflow-y: hidden;
   }
   main article {
-    max-width: 100%;
+    max-width: 75%;
+    margin-left: 10%;
+    margin-right: 10%;
   }
   main header {
     border-top: 0;
