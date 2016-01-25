@@ -67,22 +67,21 @@ main article div.article_text a {
 }
 main article div.article_text code {
   margin: 2px;
-  padding: 0;
+  padding: 4px;
   color: #000000;
-  font-size: 14px;
+  font-size: 15px;
   font-family: 'Source Code Pro,', monospace;
   background: #eeeeee;
 }
 main article div.article_text pre {
   margin: 22px 2px 22px 2px;
-  padding: 2px;
-  color: #000000;
-  border-left: 3px solid #0e94ec;
-  font-size: 14px;
+  padding: 9.5px;
+  font-size: 15px;
   font-family: 'Source Code Pro,', monospace;
-  background: #eeeeee;
-  line-height: 1.125em;
+  line-height: 1.25em;
   overflow-x: auto;
+  border-style: none;
+  border-radius: 4px;
 }
 main article div.article_text blockquote {
   margin: 22px 2px 22px 2px;
