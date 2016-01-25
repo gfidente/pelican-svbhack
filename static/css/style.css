@@ -21,8 +21,7 @@ img {
   height: auto;
 }
 .pagination {
-  margin-left: 10%;
-  margin-right: 10%;
+  margin: 1% 10%;
 }
 .pagination a.button_accent {
   padding: 10px;
@@ -98,27 +97,27 @@ main article div.article_meta {
   font-size: 12px;
   color: #999999;
 }
-main footer div#user_meta {
+footer div#user_meta {
   text-align: center;
 }
-main footer div#user_meta h2 {
+footer div#user_meta h2 {
   margin: 15px 0 5px 0;
 }
-main footer div#user_meta p {
+footer div#user_meta p {
   margin: 0 0 15px 0;
   font-size: 14px;
 }
-main footer div#user_meta ul {
+footer div#user_meta ul {
   margin: 40px 0 0 0;
   padding-left: 0;
   font-size: 16px;
   list-style-type: none;
 }
-main footer div#user_meta ul li {
+footer div#user_meta ul li {
   display: inline;
   line-height: 3em;
 }
-main footer div#user_meta ul li a {
+footer div#user_meta ul li a {
   padding: 5px 15px 5px 15px;
   border: 3px solid #eeeeee;
   border-radius: 15px;
@@ -126,7 +125,7 @@ main footer div#user_meta ul li a {
   -webkit-border-radius: 15px;
   color: #999999;
 }
-main div#ending_message {
+footer div#ending_message {
   border-top: #eeeeee 1px solid;
   padding: 0 40px 0 40px;
   color: #999999;
@@ -146,11 +145,11 @@ main div#ending_message {
 #___plusone_0 {
   width: 75px!important;
 }
+img {
+  max-width: 650px;
+  max-height: 650px;
+}
 @media screen and (min-width: 1024px) {
-  img {
-    max-width: 650px;
-    max-height: 650px;
-  }
   main {
     width: 100%;
     top: 0;
@@ -168,18 +167,15 @@ main div#ending_message {
   }
   footer {
     width: 100%;
-    height: 100%;
     border-right: #eeeeee 1px solid;
     margin-bottom: auto;
+    position: absolute;
   }
   footer h2 {
     margin: 10px 0 0 0;
   }
   footer div#user_meta {
     margin-top: 5%;
-  }
-  footer div#user_meta ul li {
-    display: block;
   }
   footer div#user_meta .author_logo {
     float: left;
