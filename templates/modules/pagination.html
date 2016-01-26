@@ -1,4 +1,5 @@
 {% if DEFAULT_PAGINATION %}
+<div class="pagination">
     <ul>
         {% if articles_page.has_previous() %}
             {% set num = articles_page.previous_page_number() %}
@@ -34,4 +35,5 @@
         {% endif %}
           </li>
     </ul>
+</div>
 {% endif %}
