@@ -21,25 +21,27 @@ img {
   height: auto;
 }
 .pagination {
-  margin: 1% 10%;
+  margin-left: 10%;
 }
-.pagination a.button_accent {
-  padding: 10px;
-  border: 2px solid #0e94ec;
-  border-radius: 20px;
-  -moz-border-radius: 20px;
-  -webkit-border-radius: 20px;
-  text-transform: uppercase;
-  color: #0e94ec;
-  font-size: 18px;
+.pagination ul {
+  display: inline-block;
+  padding: 0;
 }
-.pagination a.button_accent:hover {
+.pagination ul li {
+  display: inline;
+  float: left;
+}
+.pagination ul li .active {
+  background-color: #212121;
   color: #ffffff;
-  background-color: #0e94ec;
 }
-.pagination a.button_accent:active {
-  color: #ffffff;
-  background-color: #0e94ec;
+.pagination ul li :hover:not(.active) {
+  background-color: #ddd;
+}
+.pagination ul li a {
+  padding: 8px 16px;
+  text-decoration: none;
+  border-radius: 5px;
 }
 main {
   margin-left: auto;

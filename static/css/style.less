@@ -44,25 +44,33 @@ img {
 }
 
 .pagination {
-    margin: 1% 10%;
+  margin-left: 10%;
 
-    a.button_accent {
-      padding: 10px;
-      border: 2px solid @accent;
-      .border-radius(20px);
-      text-transform: uppercase;
-      color: @accent;
-      font-size: 18px;
-      &:hover {
+  ul {
+    display: inline-block;
+    padding: 0;
+
+    li {
+      display: inline;
+      float: left;
+      .active {
+        background-color: #212121;
         color: @white;
-        background-color: @accent;
       }
-      &:active {
-        color: @white;
-        background-color: @accent;
+      :hover:not(.active) {
+        background-color: #ddd;
+      }
+
+      a {
+        padding: 8px 16px;
+        text-decoration: none;
+        border-radius: 5px;
+
       }
     }
+  }
 }
+
 
 main {
   margin-left: auto;
