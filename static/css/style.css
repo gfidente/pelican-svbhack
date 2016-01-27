@@ -195,3 +195,9 @@ img {
     text-align: left;
   }
 }
+@media screen and (max-width: 769px) {
+  article img {
+    height: auto;
+    width: 100%;
+  }
+}
