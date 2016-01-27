@@ -61,7 +61,7 @@ main header p {
 }
 main article {
   max-width: 100%;
-  padding: 0 20px;
+  padding: 40px 20px;
 }
 main article div.article_text {
   line-height: 1.375em;
