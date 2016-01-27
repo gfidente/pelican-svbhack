@@ -61,7 +61,7 @@ main header p {
 }
 main article {
   max-width: 100%;
-  padding: 40px;
+  padding: 0 20px;
 }
 main article div.article_text {
   line-height: 1.375em;
@@ -169,7 +169,7 @@ img {
     overflow-y: hidden;
   }
   main article {
-    max-width: 75%;
+    max-width: 80%;
     margin-left: 10%;
     margin-right: 10%;
   }
