@@ -22,6 +22,7 @@ img {
 }
 .pagination {
   margin: auto 10%;
+  text-align: center;
 }
 .pagination ul {
   display: inline-block;
@@ -51,6 +52,7 @@ main header {
   padding: 40px;
   border-top: #eeeeee 1px solid;
   border-bottom: #eeeeee 1px solid;
+  text-align: center;
 }
 main header p {
   font-weight: bold;
@@ -135,6 +137,10 @@ footer div#ending_message {
   padding: 0 40px 0 40px;
   color: #999999;
   font-size: 10px;
+}
+.sosial_tools {
+  margin-bottom: 1rem;
+  margin-top: 1rem;
 }
 .fb_iframe_widget > span {
   vertical-align: baseline !important;
