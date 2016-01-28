@@ -17,8 +17,23 @@ hr {
   border: none;
 }
 img {
-  max-width: 100%;
+  display: block;
+  max-width: 650px;
+  max-height: 650px;
   height: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+iframe .twitter-tweet,
+iframe .slide_image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.article_text > iframe {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 .pagination {
   margin: auto 10%;
@@ -156,10 +171,6 @@ footer div#ending_message {
 #___plusone_0 {
   width: 75px!important;
 }
-img {
-  max-width: 650px;
-  max-height: 650px;
-}
 @media screen and (min-width: 640px) {
   main {
     width: 100%;
@@ -169,9 +180,9 @@ img {
     overflow-y: hidden;
   }
   main article {
-    max-width: 80%;
-    margin-left: 10%;
-    margin-right: 10%;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
   }
   main header {
     border-top: 0;
