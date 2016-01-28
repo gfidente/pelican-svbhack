@@ -18,8 +18,10 @@ hr {
 }
 img {
   display: block;
+  max-width: 650px;
+  max-height: 650px;
   height: auto;
-  margin-letf: auto;
+  margin-left: auto;
   margin-right: auto;
 }
 .pagination {
@@ -157,10 +159,6 @@ footer div#ending_message {
 }
 #___plusone_0 {
   width: 75px!important;
-}
-img {
-  max-width: 650px;
-  max-height: 650px;
 }
 @media screen and (min-width: 640px) {
   main {
