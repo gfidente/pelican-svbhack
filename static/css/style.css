@@ -17,8 +17,10 @@ hr {
   border: none;
 }
 img {
-  max-width: 100%;
+  display: block;
   height: auto;
+  margin-letf: auto;
+  margin-right: auto;
 }
 .pagination {
   margin: auto 10%;
