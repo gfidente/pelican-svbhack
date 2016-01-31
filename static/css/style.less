@@ -20,9 +20,21 @@ body {
   font-size: 18px;
 }
 
+header {
+  .site_name {
+    font-size: 40px;
+    font-weight: bold;
+  }
+}
+
 a {
   color: @black;
   text-decoration: none;
+  transition: 0.15ms;
+}
+
+a:hover {
+  opacity: 0.6;
 }
 
 hr {
@@ -122,6 +134,14 @@ main {
       line-height: 1.375em;
       a {
         text-decoration: underline;
+      }
+
+      h1 {
+        display: block;
+        border-bottom: @light-grey 1px solid;
+        padding-bottom: 7px;
+        margin-top: 22px;
+        margin-bottom: 22px;
       }
 
       code {

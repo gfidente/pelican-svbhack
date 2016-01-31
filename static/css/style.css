@@ -6,9 +6,17 @@ body {
   font-family: 'PT Sans', sans-serif;
   font-size: 18px;
 }
+header .site_name {
+  font-size: 40px;
+  font-weight: bold;
+}
 a {
   color: #000000;
   text-decoration: none;
+  transition: 0.15ms;
+}
+a:hover {
+  opacity: 0.6;
 }
 hr {
   color: #eeeeee;
@@ -83,6 +91,13 @@ main article div.article_text {
 }
 main article div.article_text a {
   text-decoration: underline;
+}
+main article div.article_text h1 {
+  display: block;
+  border-bottom: #eeeeee 1px solid;
+  padding-bottom: 7px;
+  margin-top: 22px;
+  margin-bottom: 22px;
 }
 main article div.article_text code {
   margin: 2px;
