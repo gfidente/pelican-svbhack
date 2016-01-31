@@ -184,46 +184,53 @@ main {
 }
 
 footer {
+  border-top: @light-grey 1px solid;
+  width: 100%;
+  margin: 0 auto;
 
-  div#paginator {
+  .author_logo {
+    width: 72px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1em;
+    max-width: 72px;
+
+    img {
+      width: 72px;
+      border-radius: 10px;
+    }
   }
 
-  div#user_meta {
-    text-align: center;
-
-    h2 {
-      margin: 15px 0 5px 0;
-    }
-
-    p {
-      margin: 0 0 15px 0;
-      font-size: 14px;
-    }
+  section.user_meta {
+    display: flex;
+    max-width: 600px;
+    margin: 1.5em auto;
 
     ul {
-      margin: 40px 0 0 0;
-      padding-left: 0;
-      font-size: 16px;
-      list-style-type: none;
-
       li {
         display: inline;
         line-height: 3em;
-
-        a {
-          padding: 5px 15px 5px 15px;
-          border: 3px solid @light-grey;
-          .border-radius(15px);
-          color: @med-grey;
-        }
       }
     }
 
-    .author_logo {
-      img {
-        max-width: 100px;
-        max-height: 100px;
-      }
+    i.fa {
+      font-size: 30px;
+    }
+
+    .author_name {
+      font-style: italic;
+      max-width: 420px;
+      width: 70%;
+      margin-left: 0.7em;
+      margin-right: 0;
+    }
+
+    .author_link {
+      text-align: left;
+      max-width: 180px;
+      width: 30%;
+      margin-left: 0;
+      margin-right: 0.7em;
     }
   }
 
@@ -279,30 +286,12 @@ footer {
   }
 
   footer {
-    width: 100%;
-    margin: 0 auto;
-    max-width: 48rem;
-
-    h2 {
-      margin: 10px 0 0 0;
-    }
-
-    div#user_meta {
-      margin-top: 5%;
-
-      .author_logo {
-        float: left;
-        margin-left: 10%;
-        margin-right: 5%;
-        margin-bottom: 10%;
-        img {
-          max-width: 100px;
-          max-height: 100px;
-        }
+    section.user_meta {
+      div.autohr_name {
+        margin-left: auto;
       }
-
-      .author_text {
-        text-align: left;
+      div.author_link {
+        margin-right: auto;
       }
     }
   }
