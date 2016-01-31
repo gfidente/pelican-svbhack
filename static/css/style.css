@@ -4,7 +4,7 @@ body {
   background-color: #ffffff;
   color: #4d4d4d;
   font-family: Verdana, "游ゴシック", YuGothic, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
-  font-size: 16px;
+  font-size: 17px;
 }
 header .site_name {
   font-size: 40px;
@@ -159,8 +159,8 @@ footer div#user_meta ul li a {
   color: #999999;
 }
 footer div#user_meta .author_logo img {
-  max-width: 100px;
-  max-height: 100px;
+  width: 58px;
+  border-radius: 10px;
 }
 footer div#ending_message {
   border-top: #eeeeee 1px solid;
