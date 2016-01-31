@@ -66,18 +66,19 @@
 
   </main>
     <footer>
-      <div id="user_meta">
-        <div class="author_logo">
-          <a href="{{ SITEURL }}/pages/about.html">
-            {% if USER_LOGO_URL %}
-            <img src="{{ USER_LOGO_URL }}" alt="logo">
-            {% else %}
-            <img src="{{ SITEURL }}/theme/images/logo.png" alt="logo">
-            {% endif %}
-          </a>
-        </div>
+      <div class="author_logo">
+        <a href="{{ SITEURL }}/pages/about.html">
+          {% if USER_LOGO_URL %}
+          <img src="{{ USER_LOGO_URL }}" alt="logo">
+          {% else %}
+          <img src="{{ SITEURL }}/theme/images/logo.png" alt="logo">
+          {% endif %}
+        </a>
+      </div>
+      <section class="user_meta">
         <div class="author_name">
           <a href="{{ SITEURL }}">{{ AUTHOR }}</a>
+          <p>{{ TAGLINE }}</p>
         </div>
         <div class="author_link">
           <ul>
@@ -88,12 +89,15 @@
             <li><a href="{{ link }}" target="_blank">{{ name }}</a></li>
             {% endfor %}
             {% for name, link in SOCIAL %}
-            <li><a href="{{ link }}" target="_blank">{{ name }}</a></li>
+            {% if name == 'twitter' %}
+            <li><a href="{{ link }}" target="_blank"><i class="fa fa-twitter-square"></i></a></li>
+            {% elif name == 'github' %}
+            <li><a href="{{ link }}" target="_blank"><i class="fa fa-github-square"></i></a></li>
+            {% endif %}
             {% endfor %}
           </ul>
         </div>
-        <i class="fa fa-twitter-square"></i>
-      </div>
+      </section>
       <div id="ending_message">
         <p>&copy; {{ AUTHOR }}. Built using <a href="http://getpelican.com" target="_blank">Pelican</a>. Theme by Giulio Fidente on <a href="https://github.com/gfidente/pelican-svbhack" target="_blank">github</a>. {% if INTERNET_DEFENSE_LEAGUE %}Member of the <a href="http://internetdefenseleague.org">Internet Defense League</a>.{% endif %}</p>
       </div>

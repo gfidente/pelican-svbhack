@@ -130,37 +130,47 @@ main article div.article_meta {
   font-size: 12px;
   color: #999999;
 }
-footer div#user_meta {
-  text-align: center;
+footer {
+  border-top: #eeeeee 1px solid;
+  width: 100%;
+  margin: 0 auto;
 }
-footer div#user_meta h2 {
-  margin: 15px 0 5px 0;
+footer .author_logo {
+  width: 72px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1em;
+  max-width: 72px;
 }
-footer div#user_meta p {
-  margin: 0 0 15px 0;
-  font-size: 14px;
+footer .author_logo img {
+  width: 72px;
+  border-radius: 10px;
 }
-footer div#user_meta ul {
-  margin: 40px 0 0 0;
-  padding-left: 0;
-  font-size: 16px;
-  list-style-type: none;
+footer section.user_meta {
+  display: flex;
+  max-width: 600px;
+  margin: 1.5em auto;
 }
-footer div#user_meta ul li {
+footer section.user_meta ul li {
   display: inline;
   line-height: 3em;
 }
-footer div#user_meta ul li a {
-  padding: 5px 15px 5px 15px;
-  border: 3px solid #eeeeee;
-  border-radius: 15px;
-  -moz-border-radius: 15px;
-  -webkit-border-radius: 15px;
-  color: #999999;
+footer section.user_meta i.fa {
+  font-size: 30px;
 }
-footer div#user_meta .author_logo img {
-  width: 58px;
-  border-radius: 10px;
+footer section.user_meta .author_name {
+  font-style: italic;
+  max-width: 420px;
+  width: 70%;
+  margin-left: 0.7em;
+  margin-right: 0;
+}
+footer section.user_meta .author_link {
+  text-align: left;
+  max-width: 180px;
+  width: 30%;
+  margin-left: 0;
+  margin-right: 0.7em;
 }
 footer div#ending_message {
   border-top: #eeeeee 1px solid;
@@ -202,29 +212,11 @@ footer div#ending_message {
   main header {
     border-top: 0;
   }
-  footer {
-    width: 100%;
-    margin: 0 auto;
-    max-width: 48rem;
+  footer section.user_meta div.autohr_name {
+    margin-left: auto;
   }
-  footer h2 {
-    margin: 10px 0 0 0;
-  }
-  footer div#user_meta {
-    margin-top: 5%;
-  }
-  footer div#user_meta .author_logo {
-    float: left;
-    margin-left: 10%;
-    margin-right: 5%;
-    margin-bottom: 10%;
-  }
-  footer div#user_meta .author_logo img {
-    max-width: 100px;
-    max-height: 100px;
-  }
-  footer div#user_meta .author_text {
-    text-align: left;
+  footer section.user_meta div.author_link {
+    margin-right: auto;
   }
 }
 @media screen and (max-width: 769px) {
