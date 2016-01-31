@@ -92,6 +92,13 @@ main article div.article_text {
 main article div.article_text a {
   text-decoration: underline;
 }
+main article div.article_text h1 {
+  display: block;
+  border-bottom: #eeeeee 1px solid;
+  padding-bottom: 7px;
+  margin-top: 22px;
+  margin-bottom: 22px;
+}
 main article div.article_text code {
   margin: 2px;
   padding: 4px;
