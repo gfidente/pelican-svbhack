@@ -104,14 +104,14 @@ main article div.article_text code {
   padding: 4px;
   color: #000000;
   font-size: 15px;
-  font-family: 'Source Code Pro,', monospace;
+  font-family: 'Source Code Pro', monospace;
   background: #eeeeee;
 }
 main article div.article_text pre {
   margin: 22px 2px 22px 2px;
   padding: 9.5px;
   font-size: 15px;
-  font-family: 'Source Code Pro,', monospace;
+  font-family: 'Source Code Pro', monospace;
   line-height: 1.25em;
   overflow-x: auto;
   border-style: none;
