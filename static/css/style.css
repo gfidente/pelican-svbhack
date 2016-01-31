@@ -3,8 +3,8 @@ body {
   padding: 0;
   background-color: #ffffff;
   color: #4d4d4d;
-  font-family: 'PT Sans', sans-serif;
-  font-size: 18px;
+  font-family: Verdana, "游ゴシック", YuGothic, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+  font-size: 16px;
 }
 header .site_name {
   font-size: 40px;
