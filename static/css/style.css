@@ -13,6 +13,10 @@ header .site_name {
 a {
   color: #000000;
   text-decoration: none;
+  transition: 0.15ms;
+}
+a:hover {
+  opacity: 0.6;
 }
 hr {
   color: #eeeeee;
