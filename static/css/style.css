@@ -3,12 +3,20 @@ body {
   padding: 0;
   background-color: #ffffff;
   color: #4d4d4d;
-  font-family: 'PT Sans', sans-serif;
-  font-size: 18px;
+  font-family: Verdana, "游ゴシック", YuGothic, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+  font-size: 17px;
+}
+header .site_name {
+  font-size: 40px;
+  font-weight: bold;
 }
 a {
   color: #000000;
   text-decoration: none;
+  transition: 0.15ms;
+}
+a:hover {
+  opacity: 0.6;
 }
 hr {
   color: #eeeeee;
@@ -17,41 +25,57 @@ hr {
   border: none;
 }
 img {
-  max-width: 100%;
+  display: block;
+  max-width: 650px;
+  max-height: 650px;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
 }
-aside div#user_meta {
-  padding: 40px;
+iframe .twitter-tweet,
+iframe .slide_image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.article_text > iframe {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.pagination {
+  margin: auto 10%;
   text-align: center;
 }
-aside div#user_meta h2 {
-  margin: 15px 0 5px 0;
+.pagination ul {
+  display: inline-block;
+  padding: 0;
 }
-aside div#user_meta p {
-  margin: 0 0 15px 0;
-  font-size: 14px;
-}
-aside div#user_meta ul {
-  margin: 40px 0 0 0;
-  padding-left: 0;
-  font-size: 16px;
-  list-style-type: none;
-}
-aside div#user_meta ul li {
+.pagination ul li {
   display: inline;
-  line-height: 3em;
+  float: left;
 }
-aside div#user_meta ul li a {
-  padding: 5px 15px 5px 15px;
-  border: 3px solid #eeeeee;
-  border-radius: 15px;
-  -moz-border-radius: 15px;
-  -webkit-border-radius: 15px;
-  color: #999999;
+.pagination ul li .active {
+  background-color: #212121;
+  color: #ffffff;
+}
+.pagination ul li :hover:not(.active) {
+  background-color: #ddd;
+}
+.pagination ul li a {
+  padding: 8px 16px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+main {
+  margin-left: auto;
+  margin-right: auto;
 }
 main header {
   padding: 40px;
   border-top: #eeeeee 1px solid;
   border-bottom: #eeeeee 1px solid;
+  text-align: center;
 }
 main header p {
   font-weight: bold;
@@ -59,8 +83,8 @@ main header p {
   text-transform: uppercase;
 }
 main article {
-  max-width: 640px;
-  padding: 40px;
+  max-width: 100%;
+  padding: 40px 20px;
 }
 main article div.article_text {
   line-height: 1.375em;
@@ -68,24 +92,30 @@ main article div.article_text {
 main article div.article_text a {
   text-decoration: underline;
 }
+main article div.article_text h1 {
+  display: block;
+  border-bottom: #eeeeee 1px solid;
+  padding-bottom: 7px;
+  margin-top: 22px;
+  margin-bottom: 22px;
+}
 main article div.article_text code {
   margin: 2px;
-  padding: 0;
+  padding: 4px;
   color: #000000;
-  font-size: 14px;
-  font-family: 'PT Mono', monospace;
+  font-size: 15px;
+  font-family: 'Source Code Pro', monospace;
   background: #eeeeee;
 }
 main article div.article_text pre {
   margin: 22px 2px 22px 2px;
-  padding: 2px;
-  color: #000000;
-  border-left: 3px solid #0e94ec;
-  font-size: 14px;
-  font-family: 'PT Mono', monospace;
-  background: #eeeeee;
-  line-height: 1.125em;
+  padding: 9.5px;
+  font-size: 15px;
+  font-family: 'Source Code Pro', monospace;
+  line-height: 1.25em;
   overflow-x: auto;
+  border-style: none;
+  border-radius: 4px;
 }
 main article div.article_text blockquote {
   margin: 22px 2px 22px 2px;
@@ -100,65 +130,101 @@ main article div.article_meta {
   font-size: 12px;
   color: #999999;
 }
-main footer {
+footer {
   border-top: #eeeeee 1px solid;
-  padding: 40px;
+  width: 100%;
+  margin: 0 auto;
 }
-main footer a.button_accent {
-  padding: 10px;
-  border: 2px solid #0e94ec;
-  border-radius: 20px;
-  -moz-border-radius: 20px;
-  -webkit-border-radius: 20px;
-  text-transform: uppercase;
-  color: #0e94ec;
-  font-size: 18px;
+footer .author_logo {
+  width: 72px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1em;
+  max-width: 72px;
 }
-main footer a.button_accent:hover {
-  color: #ffffff;
-  background-color: #0e94ec;
+footer .author_logo img {
+  width: 72px;
+  border-radius: 10px;
 }
-main footer a.button_accent:active {
-  color: #ffffff;
-  background-color: #0e94ec;
+footer section.user_meta {
+  display: flex;
+  max-width: 600px;
+  margin: 1.5em auto;
 }
-main div#ending_message {
+footer section.user_meta ul li {
+  display: inline;
+  line-height: 3em;
+}
+footer section.user_meta i.fa {
+  font-size: 30px;
+}
+footer section.user_meta .author_name {
+  font-style: italic;
+  max-width: 420px;
+  width: 70%;
+  margin-left: 0.7em;
+  margin-right: 0;
+}
+footer section.user_meta .author_name p {
+  font-size: 13px;
+}
+footer section.user_meta .author_link {
+  text-align: left;
+  max-width: 180px;
+  width: 30%;
+  margin-left: 0;
+  margin-right: 0.7em;
+}
+footer div#ending_message {
   border-top: #eeeeee 1px solid;
   padding: 0 40px 0 40px;
   color: #999999;
   font-size: 10px;
 }
-@media screen and (min-width: 1024px) {
-  aside {
-    width: 25%;
-    height: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    border-right: #eeeeee 1px solid;
-  }
-  aside h2 {
-    margin: 10px 0 0 0;
-  }
-  aside div#user_meta {
-    max-width: 192px;
-    text-align: right;
-  }
-  aside div#user_meta ul li {
-    display: block;
-  }
+.sosial_tools {
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+.fb_iframe_widget > span {
+  vertical-align: baseline !important;
+}
+.twitter-share-button {
+  display: inline;
+  width: 105px!important;
+}
+.pocket-btn {
+  display: inline;
+  width: 105px!important;
+}
+#___plusone_0 {
+  width: 75px!important;
+}
+@media screen and (min-width: 640px) {
   main {
-    width: 75%;
-    position: absolute;
+    width: 100%;
     top: 0;
     left: 25%;
     overflow-x: hidden;
     overflow-y: hidden;
   }
   main article {
-    max-width: 640px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
   }
   main header {
     border-top: 0;
+  }
+  footer section.user_meta div.autohr_name {
+    margin-left: auto;
+  }
+  footer section.user_meta div.author_link {
+    margin-right: auto;
+  }
+}
+@media screen and (max-width: 769px) {
+  article img {
+    height: auto;
+    width: 100%;
   }
 }

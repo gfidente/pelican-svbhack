@@ -5,10 +5,11 @@
 @med-grey:  #999999;
 @dark-grey:  #4d4d4d;
 @blue:  #0e94ec;
+@deep-orage: #ff5722;
 @accent:  @blue;
-@sans: 'PT Sans', sans-serif;
-@serif: 'PT Serif', serif;
-@mono: 'PT Mono', monospace;
+@sans: Verdana, "游ゴシック", YuGothic, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+@serif: "Times New Roman", "游明朝", YuMincho, "Hiragino Mincho ProN", Meiryo, serif;
+@mono: 'Source Code Pro', monospace;
 
 body {
   margin: 0;
@@ -16,12 +17,24 @@ body {
   background-color: @white;
   color: @dark-grey;
   font-family: @sans;
-  font-size: 18px;
+  font-size: 17px;
+}
+
+header {
+  .site_name {
+    font-size: 40px;
+    font-weight: bold;
+  }
 }
 
 a {
   color: @black;
   text-decoration: none;
+  transition: 0.15ms;
+}
+
+a:hover {
+  opacity: 0.6;
 }
 
 hr {
@@ -38,49 +51,70 @@ hr {
 }
 
 img {
-  max-width: 100%;
+  display: block;
+  max-width: 650px;
+  max-height: 650px;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-aside {
-  div#user_meta {
-    padding: 40px;
-    text-align: center;
+iframe {
+  .twitter-tweet, .slide_image{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
 
-    h2 {
-      margin: 15px 0 5px 0;
-    }
+.article_text > iframe {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
 
-    p {
-      margin: 0 0 15px 0;
-      font-size: 14px;
-    }
+.pagination {
+  margin: auto 10%;
+  text-align: center;
 
-    ul {
-      margin: 40px 0 0 0;
-      padding-left: 0;
-      font-size: 16px;
-      list-style-type: none;
+  ul {
+    display: inline-block;
+    padding: 0;
 
-      li {
-        display: inline;
-        line-height: 3em;
+    li {
+      display: inline;
+      float: left;
+      .active {
+        background-color: #212121;
+        color: @white;
+      }
+      :hover:not(.active) {
+        background-color: #ddd;
+      }
 
-        a {
-          padding: 5px 15px 5px 15px;
-          border: 3px solid @light-grey;
-          .border-radius(15px);
-          color: @med-grey;
-        }
+      a {
+        padding: 8px 16px;
+        text-decoration: none;
+        border-radius: 5px;
+
       }
     }
   }
 }
 
+
 main {
+  margin-left: auto;
+  margin-right: auto;
+
   header {
     padding: 40px;
     border-top: @light-grey 1px solid;
     border-bottom: @light-grey 1px solid;
+    text-align: center;
+
+    .site_name {
+    }
 
     p {
       font-weight: bold;
@@ -90,8 +124,8 @@ main {
   }
 
   article {
-    max-width: 640px;
-    padding: 40px;
+    max-width: 100%;
+    padding: 40px 20px;
 
     div.article_title {
     }
@@ -102,25 +136,32 @@ main {
         text-decoration: underline;
       }
 
+      h1 {
+        display: block;
+        border-bottom: @light-grey 1px solid;
+        padding-bottom: 7px;
+        margin-top: 22px;
+        margin-bottom: 22px;
+      }
+
       code {
         margin: 2px;
-        padding: 0;
+        padding: 4px;
         color: @black;
-        font-size: 14px;
+        font-size: 15px;
         font-family: @mono;
         background: @light-grey;
       }
 
       pre {
         margin: 22px 2px 22px 2px;
-        padding: 2px;
-        color: @black;
-        border-left: 3px solid @accent;
-        font-size: 14px;
+        padding: 9.5px;
+        font-size: 15px;
         font-family: @mono;
-        background: @light-grey;
-        line-height: 1.125em;
+        line-height: 1.25em;
         overflow-x: auto;
+        border-style: none;
+        border-radius: 4px;
       }
 
       blockquote {
@@ -140,29 +181,59 @@ main {
       color: @med-grey;
     }
   }
+}
 
-  footer {
-    border-top: @light-grey 1px solid;
-    padding: 40px;
+footer {
+  border-top: @light-grey 1px solid;
+  width: 100%;
+  margin: 0 auto;
 
-    a.button_accent {
-      padding: 10px;
-      border: 2px solid @accent;
-      .border-radius(20px);
-      text-transform: uppercase;
-      color: @accent;
-      font-size: 18px;
-      &:hover {
-        color: @white;
-        background-color: @accent;
-      }
-      &:active {
-        color: @white;
-        background-color: @accent;
+  .author_logo {
+    width: 72px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1em;
+    max-width: 72px;
+
+    img {
+      width: 72px;
+      border-radius: 10px;
+    }
+  }
+
+  section.user_meta {
+    display: flex;
+    max-width: 600px;
+    margin: 1.5em auto;
+
+    ul {
+      li {
+        display: inline;
+        line-height: 3em;
       }
     }
 
-    div#paginator {
+    i.fa {
+      font-size: 30px;
+    }
+
+    .author_name {
+      font-style: italic;
+      max-width: 420px;
+      width: 70%;
+      margin-left: 0.7em;
+      margin-right: 0;
+      p {
+        font-size: 13px;
+      }
+    }
+
+    .author_link {
+      text-align: left;
+      max-width: 180px;
+      width: 30%;
+      margin-left: 0;
+      margin-right: 0.7em;
     }
   }
 
@@ -174,45 +245,66 @@ main {
   }
 }
 
-@media screen and (min-width: 1024px) {
-  aside {
-    width: 25%;
-    height: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    border-right: @light-grey 1px solid;
+.sosial_tools {
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
 
-    h2 {
-      margin: 10px 0 0 0;
-    }
+.fb_iframe_widget > span {
+  vertical-align: baseline !important;
+}
 
-    div#user_meta {
-      max-width: 192px;
-      text-align: right;
+.twitter-share-button {
+  display : inline;
+  width   : 105px!important;
+}
 
-      ul {
-        li {
-          display: block;
-        }
-      }
-    }
-  }
+.pocket-btn {
+  display : inline;
+  width   : 105px!important;
+}
 
+#___plusone_0 {
+  width   : 75px!important;
+}
+
+
+@media screen and (min-width: 640px) {
   main {
-    width: 75%;
-    position: absolute;
+    width: 100%;
     top: 0;
     left: 25%;
     overflow-x: hidden;
     overflow-y: hidden;
 
     article {
-      max-width: 640px;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     header {
       border-top: 0;
+    }
+  }
+
+  footer {
+    section.user_meta {
+      div.autohr_name {
+        margin-left: auto;
+      }
+      div.author_link {
+        margin-right: auto;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 769px){
+  article {
+    img {
+      height : auto;
+      width  : 100%;
     }
   }
 }

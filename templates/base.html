@@ -8,7 +8,8 @@
   -->
   <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/style.css">
   <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/pygments.css">
-  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=PT+Sans|PT+Serif|PT+Mono">
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Source+Code+Pro">
+  <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/font-awesome.min.css">
 
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -34,38 +35,18 @@
 </head>
 
 <body>
-  <aside>
-    <div id="user_meta">
-      <a href="{{ SITEURL }}">
-        {% if USER_LOGO_URL %}
-        <img src="{{ USER_LOGO_URL }}" alt="logo">
-        {% else %}
-        <img src="{{ SITEURL }}/theme/images/logo.png" alt="logo">
-        {% endif %}
-      </a>
-      <h2><a href="{{ SITEURL }}">{{ AUTHOR }}</a></h2>
-      <p>{{ TAGLINE }}</p>
-      <ul>
-        {% for title, link in MENUITEMS %}
-        <li><a href="{{ link }}">{{ title }}</a></li>
-        {% endfor %}
-        {% if DISPLAY_PAGES_ON_MENU %}{% for p in pages %}
-        <li><a href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a></li>
-        {% endfor %}{% endif %}
-        {% for name, link in LINKS %}
-        <li><a href="{{ link }}" target="_blank">{{ name }}</a></li>
-        {% endfor %}
-        {% for name, link in SOCIAL %}
-        <li><a href="{{ link }}" target="_blank">{{ name }}</a></li>
-        {% endfor %}
-      </ul>
-    </div>
-  </aside>
-
   <main>
     <header>
+      <div class="site_name">
+        <a href="{{ SITEURL }}">{{ SITENAME }}</a>
+      </div>
       <p>
-      <a href="{{ SITEURL }}">Index</a> &brvbar; <a href="{{ SITEURL }}/archives.html">Archives</a>
+      <a href="{{ SITEURL }}">Index</a> &brvbar;
+      {% if ARCHIVES_URL %}
+        <a href="{{ SITEURL }}/{{ ARCHIVES_URL }}">Archives</a>
+      {% else %}
+        <a href="{{ SITEURL }}/archives.html">Archives</a>
+      {% endif %}
       {% if FEED_ALL_ATOM %}
       &brvbar; <a href="{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}">Atom</a>
       {% endif %}
@@ -83,10 +64,43 @@
     {% block footer %}
     {% endblock %}
 
-    <div id="ending_message">
-      <p>&copy; {{ AUTHOR }}. Built using <a href="http://getpelican.com" target="_blank">Pelican</a>. Theme by Giulio Fidente on <a href="https://github.com/gfidente/pelican-svbhack" target="_blank">github</a>. {% if INTERNET_DEFENSE_LEAGUE %}Member of the <a href="http://internetdefenseleague.org">Internet Defense League</a>.{% endif %}</p>
-    </div>
   </main>
-  {% include "modules/idl.html" %}
+    <footer>
+      <div class="author_logo">
+        <a href="{{ SITEURL }}/pages/about.html">
+          {% if USER_LOGO_URL %}
+          <img src="{{ USER_LOGO_URL }}" alt="logo">
+          {% else %}
+          <img src="{{ SITEURL }}/theme/images/logo.png" alt="logo">
+          {% endif %}
+        </a>
+      </div>
+      <section class="user_meta">
+        <div class="author_name">
+          <a href="{{ SITEURL }}">{{ AUTHOR }}</a>
+          <p>{{ TAGLINE }}</p>
+        </div>
+        <div class="author_link">
+          <ul>
+            {% if DISPLAY_PAGES_ON_MENU %}{% for p in pages %}
+            <li><a href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a></li>
+            {% endfor %}{% endif %}
+            {% for name, link in LINKS %}
+            <li><a href="{{ link }}" target="_blank">{{ name }}</a></li>
+            {% endfor %}
+            {% for name, link in SOCIAL %}
+            {% if name == 'twitter' %}
+            <li><a href="{{ link }}" target="_blank"><i class="fa fa-twitter-square"></i></a></li>
+            {% elif name == 'github' %}
+            <li><a href="{{ link }}" target="_blank"><i class="fa fa-github-square"></i></a></li>
+            {% endif %}
+            {% endfor %}
+          </ul>
+        </div>
+      </section>
+      <div id="ending_message">
+        <p>&copy; {{ AUTHOR }}. Built using <a href="http://getpelican.com" target="_blank">Pelican</a>. Theme by Giulio Fidente on <a href="https://github.com/gfidente/pelican-svbhack" target="_blank">github</a>. {% if INTERNET_DEFENSE_LEAGUE %}Member of the <a href="http://internetdefenseleague.org">Internet Defense League</a>.{% endif %}</p>
+      </div>
+    </footer>
 </body>
 </html>
