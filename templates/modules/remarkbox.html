@@ -4,9 +4,8 @@
 <!-- RemarkBox - greatest comment, forum, remark, review, and Q&A service! -->
 <script type="text/javascript" src="http://demo.remarkbox.com/static/js/iframe-resizer/iframeResizer.min.js"></script>
 <script type="text/javascript">
-    thread_uri = (window.location != window.parent.location) ? document.referrer: document.location;
     thread_fragment = window.location.hash;
-    //alert(thread_fragment);
+    thread_uri = window.location.href;
     document.write('<iframe id="remarkbox" src="http://demo.remarkbox.com/embed?thread_uri=' + thread_uri + '" title="remarkbox" width="100%" style="width: 100% !important; border: none !important; overflow: hidden !important;" allowtransparency="true" scrolling="no" horizontalscrolling="no" verticalscrolling="no" tabindex="0" seamless></iframe>');
     remarkbox_iframe = document.getElementById("remarkbox");
     //iFrameResize( [{inPageLinks:true}], remarkbox_iframe);
