@@ -5,8 +5,13 @@
 <script type="text/javascript" src="http://demo.remarkbox.com/static/js/iframe-resizer/iframeResizer.min.js"></script>
 <script type="text/javascript">
     thread_uri = (window.location != window.parent.location) ? document.referrer: document.location;
+    thread_fragment = window.location.hash;
+    //alert(thread_fragment);
     document.write('<iframe id="remarkbox" src="http://demo.remarkbox.com/embed?thread_uri=' + thread_uri + '" title="remarkbox" width="100%" style="width: 100% !important; border: none !important; overflow: hidden !important;" allowtransparency="true" scrolling="no" horizontalscrolling="no" verticalscrolling="no" tabindex="0" seamless></iframe>');
-    iFrameResize( [], document.getElementById('remarkbox') );
+    remarkbox_iframe = document.getElementById("remarkbox");
+    //iFrameResize( [{inPageLinks:true}], remarkbox_iframe);
+    iFrameResize( [], remarkbox_iframe);
+    remarkbox_iframe.iFrameResizer.moveToAnchor(thread_fragment);
 </script>
     </div>
   </div>
