@@ -48,6 +48,12 @@ aside div#user_meta ul li a {
   -webkit-border-radius: 15px;
   color: #999999;
 }
+aside div#user_meta div#social_icons {
+  margin: 15px 0px 0px 0px;
+}
+aside div#user_meta div#social_icons a img {
+  width: 36px;
+}
 main header {
   padding: 40px;
   border-top: #eeeeee 1px solid;
@@ -146,6 +152,12 @@ main div#ending_message {
   }
   aside div#user_meta ul li {
     display: block;
+  }
+  aside div#user_meta div#social_icons {
+    max-width: 192px;
+    position: absolute;
+    bottom: 0;
+    margin: 0 0 15px 0;
   }
   main {
     width: 75%;
