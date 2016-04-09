@@ -135,6 +135,14 @@ main div#ending_message {
   color: #999999;
   font-size: 10px;
 }
+.wordwrap-left {
+  float: left;
+  padding-right: 1em;
+}
+.wordwrap-right {
+  float: right;
+  padding-left: 1em;
+}
 @media screen and (min-width: 1024px) {
   aside {
     width: 25%;

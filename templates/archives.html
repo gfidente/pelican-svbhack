@@ -1,15 +1,21 @@
 {% extends "base.html" %}
-{% block title %}&ndash; Archives{% endblock %}
+{% block title %} Archives{% endblock %}
+
+{% set prev_date = '' %}
 
 {% block content %}
 <article>
   <div class="article_text">
-    <dl>
-      {% for article in dates %}
-      <dt>{{ article.locale_date }}</dt>
-      <dd><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></dd>
-      {% endfor %}
-    </dl>
+  {% for article in dates %}
+    {% set current_date = article.date.strftime('%Y-%m') %}
+    {% if current_date != prev_date %}
+      {% set prev_date = current_date %}
+      <h4>{{ current_date }}</h4>
+    {% endif %}
+
+        <li><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></li>
+
+  {% endfor %}
   </div>
 </article>
 {% endblock %}
