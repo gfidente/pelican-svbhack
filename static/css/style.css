@@ -62,9 +62,8 @@ main header p {
   text-transform: uppercase;
 }
 main article {
-  max-width: 640px;
-  padding-left: 40px;
-  padding-bottom: 40px;
+  max-width: 100%;
+  padding: 5%;
 }
 main article div.article_text {
   line-height: 1.375em;
@@ -171,7 +170,7 @@ main div#ending_message {
     overflow-y: hidden;
   }
   main article {
-    max-width: 640px;
+    max-width: 100%;
   }
   main header {
     border-top: 0;
