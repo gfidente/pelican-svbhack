@@ -64,6 +64,11 @@
 
   <main>
     <header>
+      <form method="get" id="search" action="http://duckduckgo.com/" style="float:right;">
+          <input type="hidden" name="sites" value="{{ SITEURL }}"/>
+          <input type="submit" value="Search" style="visibility: hidden;" />
+          <input type="text" name="q" maxlength="255" placeholder="Search"/>
+      </form>
       <p>
       <!-- <a href="{{ SITEURL }}">{{ SITEURL }}</a> &nbsp; &bull; &nbsp; -->
       <a href="{{ SITEURL }}/random.html">Random</a>
