@@ -65,8 +65,8 @@ main header p {
 }
 main article {
   max-width: 100%;
-  padding-left: 5%;
-  padding-right: 5%;
+  padding-left: 4%;
+  padding-right: 4%;
 }
 main article div.article_text {
   line-height: 1.375em;
@@ -146,14 +146,36 @@ main div#ending_message {
   padding-left: 1em;
 }
 
-/* MOBILE */
+
+#search-box {
+  border-color: #bbbbbb;
+  border-radius: 2px;
+  border-width: 1px;
+  border-style: solid;
+  padding: .3em;
+}
+
+/* Smart Phones */
+@media screen and (max-width: 480px) {
+  .hidden-on-mobile {
+    display: none;
+  }
+  aside div#user_meta h2 {
+    font-size: 1.4em;
+  }
+}
+
+/* Tablets */
 @media screen and (max-width: 1024px) {
+  .hidden-on-tablet {
+    display: none;
+  }
   aside img {
     float: left;
-    padding-right: 5%;
+    padding-right: 4%;
   }
   aside div#user_meta {
-    padding: 5%;
+    padding: 4%;
     padding-bottom: 0px;
   }
   aside div#user_meta h2 {
@@ -168,21 +190,20 @@ main div#ending_message {
     font-size: 10px;
   }
   main header {
-    padding: 5%;
+    padding: 4%;
     padding-top: 0px;
   }
-  .hidden-on-mobile {
-    display: none;
-  }
-
-  main header form {
-    width: 100%;
-  }
-
   main article div.article_title h1 {
     padding-top: 0px;
   }
 
+  aside div#user_meta ul li a {
+    font-size: .7em;
+  }
+
+  aside div#user_meta ul {
+    margin: 0px;
+  }
 }
 
 /* EVERYTHING ELSE */
@@ -199,8 +220,8 @@ main div#ending_message {
     margin: 10px 0 0 0;
   }
   aside div#user_meta {
-    max-width: 192px;
-    text-align: right;
+    /* max-width: 192px; */
+    text-align: center;
   }
   aside div#user_meta ul li {
     display: block;

@@ -45,7 +45,7 @@
       </a>
       <h2><a href="{{ SITEURL }}">{{ AUTHOR }}</a></h2>
       <p>{{ TAGLINE }}</p>
-      <ul class="hidden-on-mobile">
+      <ul class="hidden-on-tablet">
         {% for title, link in MENUITEMS %}
         <li><a href="{{ link }}">{{ title }}</a></li>
         {% endfor %}
@@ -67,7 +67,7 @@
       <form method="get" id="search" action="http://duckduckgo.com/">
           <input type="hidden" name="sites" value="{{ SITEURL }}"/>
           <input type="submit" value="Search" style="display: none;" />
-          <input type="text" name="q" maxlength="255" placeholder="Search"/>
+          <input type="text" name="q" maxlength="255" placeholder="Search" id="search-box"/>
       </form>
       <p>
       <!-- <a href="{{ SITEURL }}">{{ SITEURL }}</a> &nbsp; &bull; &nbsp; -->
