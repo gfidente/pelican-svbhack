@@ -153,6 +153,7 @@ main div#ending_message {
   border-width: 1px;
   border-style: solid;
   padding: .3em;
+  width: 200px;
 }
 
 /* Smart Phones */
