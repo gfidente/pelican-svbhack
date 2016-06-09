@@ -7,7 +7,7 @@ body {
   font-size: 18px;
 }
 h1, h2, h3, h4, h5, h6 {
-  padding-top: 40px;
+  padding-top: 30px;
 }
 a {
   color: #000000;
@@ -137,6 +137,11 @@ main div#ending_message {
   color: #999999;
   font-size: 10px;
 }
+
+main hr {
+  margin-top: 50px;
+}
+
 .wordwrap-left {
   float: left;
   padding-right: 1em;
