@@ -21,6 +21,7 @@ hr {
 }
 img {
   max-width: 100%;
+  border-radius: 8px;
 }
 aside div#user_meta {
   padding: 40px;
