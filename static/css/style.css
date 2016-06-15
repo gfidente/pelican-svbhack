@@ -143,6 +143,10 @@ main hr {
   margin-top: 50px;
 }
 
+.tagline {
+  border-bottom: 1px dotted #BBBBBB;
+}
+
 .wordwrap-left {
   float: left;
   padding-right: 1em;
@@ -151,7 +155,6 @@ main hr {
   float: right;
   padding-left: 1em;
 }
-
 
 #search-box {
   border-color: #bbbbbb;
