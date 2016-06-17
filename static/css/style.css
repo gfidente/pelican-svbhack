@@ -19,6 +19,10 @@ hr {
   height: 1px;
   border: none;
 }
+dt {
+  font-weight: bold;
+  font-style: italic;
+}
 img {
   max-width: 100%;
   border-radius: 8px;
