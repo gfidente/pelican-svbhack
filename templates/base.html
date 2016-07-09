@@ -55,9 +55,6 @@
         {% for name, link in LINKS %}
         <li><a href="{{ link }}" target="_blank">{{ name }}</a></li>
         {% endfor %}
-        {% for name, link in SOCIAL %}
-        <li><a href="{{ link }}" target="_blank">{{ name }}</a></li>
-        {% endfor %}
       </ul>
     </div>
   </aside>
@@ -73,13 +70,14 @@
       <!-- <a href="{{ SITEURL }}">{{ SITEURL }}</a> &nbsp; &bull; &nbsp; -->
       <a href="{{ SITEURL }}/random.html">Random</a>
       &nbsp; &bull; &nbsp; <a href="{{ SITEURL }}/archives.html">Archives</a>
-      &nbsp; &bull; &nbsp; <a href="{{ SITEURL }}/about/">About</a>
       {% if FEED_ALL_ATOM %}
       &nbsp; &bull; &nbsp; <a href="{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}">RSS</a>
       {% endif %}
       {% if FEED_ALL_RSS %}
       &nbsp; &bull; &nbsp; <a href="{{ FEED_DOMAIN }}/{{ FEED_ALL_RSS }}">RSS</a>
       {% endif %}
+      &nbsp; &bull; &nbsp; <a href="{{ SITEURL }}/about/">About</a>
+      &nbsp; &bull; &nbsp; <a href="{{ SITEURL }}/contact/">Contact</a>
       {% block header %}
       {% endblock header %}
       </p>
@@ -88,14 +86,32 @@
     {% block content %}
     {% endblock %}
 
+    <footer>
     {% block footer %}
+
+    <img src="/uploads/profile/garden-profile.jpg" width="200px" style="float: left; margin-left: 10%; margin-right: 40px;" />
+
+<div style="margin-right: 10%;">
+<p>
+    <a href="/about/">Russell builds products</a>,  practices permaculture, and writes technical articles.
+</p>
+
+<p>
+Did you enjoy reading this? Grab a drink and click <a href="/random.html">random</a> for more!
+</p>
+
+<p>
+You should <a href="/contact/">contact</a> Russell to open a line of communication.
+</p>
+</div>
+
     {% endblock %}
+    </footer>
 
     <div id="ending_message">
-      <p>&copy; {{ AUTHOR }}.
-      <!-- Built using <a href="http://getpelican.com" target="_blank">Pelican</a>. Theme by Giulio Fidente on <a href="https://github.com/gfidente/pelican-svbhack" target="_blank">github</a>. -->
-    {% if INTERNET_DEFENSE_LEAGUE %}Member of the <a href="http://internetdefenseleague.org">Internet Defense League</a>.{% endif %}</p>
+      &copy; {{ AUTHOR }}.
     </div>
+
   </main>
   {% include "modules/idl.html" %}
 </body>

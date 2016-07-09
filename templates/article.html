@@ -14,13 +14,12 @@
     {{ article.content }}
   </div>
   <div class="article_meta">
-    <p>Posted on: {{ article.locale_date }}</p>
-    <p>Category: <a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a>
-      {% if article.tags %} &ndash; Tags:
+    <p>{{ article.locale_date }}</p>
+    {% if article.tags %} Tags:
       {% for tag in article.tags %}
-      <a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a>{% if not loop.last %},{% endif %}
+        <a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a>{% if not loop.last %},{% endif %}
       {% endfor %}
-      {% endif %}
+    {% endif %}
     </p>
   </div>
 
