@@ -6,7 +6,7 @@ My fork of pelican-svbhack is a responsive theme for [Pelican](http://getpelican
 
 You can see the [theme in action](http://russell.ballestrini.net/).
 
-![theme screenshot](https://raw.github.com/russsellballestrini/pelican-svbhack/master/screenshot.png)
+![theme screenshot](https://github.com/russellballestrini/pelican-svbhack/raw/master/screenshot.png)
 
 ## FEATURES
 
