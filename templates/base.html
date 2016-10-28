@@ -47,13 +47,13 @@
       <p>{{ TAGLINE }}</p>
       <ul class="hidden-on-tablet">
         {% for title, link in MENUITEMS %}
-        <li><a href="{{ link }}"><img src="{{ link }}/favicon.ico"> {{ title }}</a></li>
+        <li><a href="{{ link }}">{{ title }}</a></li>
         {% endfor %}
         {% if DISPLAY_PAGES_ON_MENU %}{% for p in pages %}
         <li><a href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a></li>
         {% endfor %}{% endif %}
         {% for name, link in LINKS %}
-        <li><a href="{{ link }}" target="_blank">{{ name }}</a></li>
+        <li><a href="{{ link }}" target="_blank"><img src="{{ link }}/favicon.ico"> {{ name }}</a></li>
         {% endfor %}
       </ul>
     </div>
