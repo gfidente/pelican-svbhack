@@ -53,7 +53,7 @@
         <li><a href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a></li>
         {% endfor %}{% endif %}
         {% for name, link in LINKS %}
-        <li><a href="{{ link }}" target="_blank">{{ name }}</a></li>
+        <li><a href="{{ link }}" target="_blank"><img src="{{ link }}/favicon.ico" style="width: 16px; border-radius:0px;vertical-align: -3px;"> {{ name }}</a></li>
         {% endfor %}
       </ul>
     </div>
@@ -100,7 +100,7 @@ Did you enjoy reading this? Click <a href="/random.html">random</a> for more!
 </p>
 
 <p>
-Russell <a href="/about/">builds products</a>, blogs about tech, and practices permaculture.
+Russell <a href="/about/">builds products</a>, blogs about tech, and practices <a href="http://unturf2.tumblr.com">permaculture</a>.
 <br/>
 He also enjoys conversation so you should <a href="/contact/">contact</a> him.
 </p>

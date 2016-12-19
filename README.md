@@ -1,12 +1,12 @@
 # SVBHACK
 
-pelican-svbhack is a responsive theme for [Pelican](http://getpelican.com), it is my hack of a svbtle-like theme.
+My fork of pelican-svbhack is a responsive theme for [Pelican](http://getpelican.com), it is a hack of a svbtle-like theme.
 
 ## DEMO
 
-You can see the [theme in action](http://www.giuliofidente.com/).
+You can see the [theme in action](http://russell.ballestrini.net/).
 
-![theme screenshot](https://raw.github.com/gfidente/pelican-svbhack/master/screenshot.png)
+![theme screenshot](https://github.com/russellballestrini/pelican-svbhack/raw/master/screenshot.png)
 
 ## FEATURES
 
@@ -22,7 +22,7 @@ You can see the [theme in action](http://www.giuliofidente.com/).
 
 ## INSTALL
 
-Clone the [repository](https://github.com/gfidente/pelican-svbhack), edit your `pelicanconf.py` and modify the `THEME` variable to make it point to the downloaded theme location.
+Clone the [repository](https://github.com/russellballestrini/pelican-svbhack), edit your `pelicanconf.py` and modify the `THEME` variable to make it point to the downloaded theme location.
 
 ## PELICANCONF.PY
 
@@ -32,11 +32,9 @@ Supports a number of common global variables but patches are welcomed if you nee
 
 - `USER_LOGO_URL` to replace the logo placeholder, put your logo in content/images/your_logo.png and make this var point to `SITEURL + '/static/images/your_logo.png'`
 
-- `DISQUS_SITENAME` set this to your Disqus sitename to enable disqus comments in articles
+- `REMARKBOX` set this to true to enable [Remarkbox.com](http://www.remarkbox.com) comments in articles
 
 - `TAGLINE` some text rendered right below the logo
-
-- `INTERNET_DEFENSE_LEAGUE` set this to `True` if you want to enable the [Internet Defense League](http://internetdefenseleague.org) code
 
 When developing locally, you may want to set the following variable: `SITEURL = http://localhost:8000`
 
@@ -47,7 +45,7 @@ When developing locally, you may want to set the following variable: `SITEURL = 
 
 ## AUTHOR
 
-pelican-svbhack is authored by Giulio Fidente.
+pelican-svbhack is authored by Giulio Fidente. Russell Ballestrini forked this to create this branch.
 
 ## LICENSE
 
