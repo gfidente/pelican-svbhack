@@ -19,6 +19,11 @@ hr {
 img {
   max-width: 100%;
 }
+.round-img {
+  border-radius: 50%;
+  padding: 2px;
+  border: 10px solid;
+}
 aside div#user_meta {
   padding: 40px;
   text-align: center;
