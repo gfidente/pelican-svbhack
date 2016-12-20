@@ -32,6 +32,8 @@ Supports a number of common global variables but patches are welcomed if you nee
 
 - `USER_LOGO_URL` to replace the logo placeholder, put your logo in content/images/your_logo.png and make this var point to `SITEURL + '/static/images/your_logo.png'`
 
+- `ROUND_USER_LOGO` set this to `True` to crop your logo to a circle and add a black border
+
 - `DISQUS_SITENAME` set this to your Disqus sitename to enable disqus comments in articles
 
 - `TAGLINE` some text rendered right below the logo
