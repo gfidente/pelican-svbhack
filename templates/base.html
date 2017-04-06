@@ -46,6 +46,18 @@
       <h2><a href="{{ SITEURL }}">{{ AUTHOR }}</a></h2>
       <p>{{ TAGLINE }}</p>
       <ul class="hidden-on-tablet">
+	<br/>
+	<div class="advert">
+	<!--<a href="https://www.remarkbox.com/"><img src="https://www.remarkbox.com/static/img/remarkbox-logo.png" width="75px"/></a><br/>-->
+	<!--<img src="https://www.remarkbox.com/favicon.ico" style="width: 20px; float: right; border-radius: 0px; margin-right: 5px; opacity: 0.8;"/>
+	-->
+
+	<a href="https://www.remarkbox.com/" class="advert"><span class="avoidwrap">Your site deserves — </span><span class="avoidwrap">a beautiful comment section.</span></a><br/>
+	  <span style="color: #006621;">[Ad] www.remarkbox.com</span> <br/>
+	Demo on your site in 30s <span class="avoidwrap"> or try it out here!</span>
+	<br/>
+
+	</div>
         {% for title, link in MENUITEMS %}
         <li><a href="{{ link }}">{{ title }}</a></li>
         {% endfor %}
@@ -92,6 +104,20 @@
     <footer>
     {% block footer %}
 
+    <div style="margin-left: 15%; margin-right: 15%;">
+    Do you run a static website and need a <a href="https://www.remarkbox.com">Disqus alternative</a>?
+    <br/>
+    You should check out my latest project, <a href="https://www.remarkbox.com">Remarkbox</a>. <span class="avoidwrap">It's a comment system.</span>
+    <br/>
+    I look forward to your feedback! 
+    </div>
+
+    <hr/>
+
+    <br/>
+    <br/>
+    <br/>
+
     <img src="/uploads/profile/garden-profile.jpg" width="300px" style="float: left; margin-right: 40px; margin-bottom: 40px; margin-left: 5%;" />
 
 <div style="margin-right: 5%;">
@@ -101,6 +127,7 @@ Did you enjoy reading this? Click <a href="/random.html">random</a> for more!
 
 <p>
 Russell <a href="/about/">builds products</a>, blogs about tech, and practices <a href="http://unturf2.tumblr.com">permaculture</a>.
+<br/>
 <br/>
 He also enjoys conversation so you should <a href="/contact/">contact</a> him.
 </p>

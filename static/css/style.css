@@ -201,6 +201,29 @@ p.topic-title {
   width: 190px;
 }
 
+span.avoidwrap { 
+  display:inline-block;
+}
+
+div.advert {
+  font-size: .8em;
+  background-color: #fafafa;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: left;
+  border-left: 2px solid #0e94ec;
+}
+
+a.advert {
+  color: #AA0000;
+  font-size: 1.2em;
+}
+
+a.advert:hover {
+  color: #d40000;
+  font-size: 1.2em;
+}
+
 /* Smart Phones */
 @media screen and (max-width: 480px) {
   .hidden-on-mobile {
