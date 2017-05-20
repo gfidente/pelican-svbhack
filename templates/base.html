@@ -60,6 +60,15 @@
         <li><a href="{{ link }}" target="_blank">{{ name }}</a></li>
         {% endfor %}
       </ul>
+      <div id="social_icons">
+        {% for file, link in SOCIAL_ICONS %}
+        {% if ICONS_PATH %}
+        <a href="{{ link }}" target="_blank"><img src="{{ SITEURL }}/theme/{{ ICONS_PATH }}/{{ file }}"></a>
+        {% else %}
+        <a href="{{ link }}" target="_blank"><img src="{{ SITEURL }}/theme/images/icons/{{ file }}"></a>
+        {% endif %}
+        {% endfor %}
+      </div>
     </div>
   </aside>
 
