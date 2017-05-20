@@ -9,12 +9,25 @@
   <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/style.css">
   <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/pygments.css">
   <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=PT+Sans|PT+Serif|PT+Mono">
-
+  <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/youtube.css">
+  {% if FAVICON %}
+  <link rel="shortcut icon" href="{{ FAVICON }}" type="image/x-icon">
+  <link rel="icon" href="{{ FAVICON }}" type="image/x-icon">
+  {% endif %}
+  {% for lang, href in HREFLANG %}
+  <link rel="alternate" hreflang="{{ lang }}" href="{{ href }}" />
+  {% endfor %}
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="author" content="{{ AUTHOR }}">
-  <meta name="description" content="Posts and writings by {{ AUTHOR }}">
-
+  <meta name="description" content="Posts and writings by {{ AUTHOR }}. {{ TAGLINE }}">
+  {% if META_IMAGE %}
+  <meta property="og:image" content="{{ META_IMAGE }}" />
+  <meta property="og:image:type" content="{{ META_IMAGE_TYPE }}" />
+  <meta name="twitter:image" content="{{ META_IMAGE }}" />
+  <meta itemprop="image" content="{{ META_IMAGE }}" />
+  {% endif %}
   {% if FEED_ALL_ATOM %}
   <link href="{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Atom" />
   {% endif %}
@@ -34,7 +47,7 @@
 </head>
 
 <body>
-  <aside>
+  <aside class="gray_background">
     <div id="user_meta">
       <a href="{{ SITEURL }}">
         {% if USER_LOGO_URL %}
@@ -43,27 +56,44 @@
         {% else %}
         <img src="{{ SITEURL }}/theme/images/logo.png" alt="logo">
         {% endif %}
-      </a>
-      <h2><a href="{{ SITEURL }}">{{ AUTHOR }}</a></h2>
-      <p>{{ TAGLINE }}</p>
-      <ul>
-        {% for title, link in MENUITEMS %}
-        <li><a href="{{ link }}">{{ title }}</a></li>
-        {% endfor %}
+        </a>
+        <h2><a href="{{ SITEURL }}">{{ AUTHOR }}</a></h2>
+        <p>{{ TAGLINE }}</p>
+        <ul>
         {% if DISPLAY_PAGES_ON_MENU %}{% for p in pages %}
         <li><a href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a></li>
         {% endfor %}{% endif %}
         {% for name, link in LINKS %}
         <li><a href="{{ link }}" target="_blank">{{ name }}</a></li>
         {% endfor %}
+        <ul class="social">
         {% for name, link in SOCIAL %}
-        <li><a href="{{ link }}" target="_blank">{{ name }}</a></li>
+        <li><a class="sc-{{ name }} white" href="{{ link }}" target="_blank"><i class="fa fa-{{ name }}"></i></a></li>
         {% endfor %}
+        </ul>
       </ul>
     </div>
   </aside>
 
   <main>
+
+  {% if MAIN_MENU %}
+    <header>
+      <p>
+        / <a href="{{ SITEURL }}">Home</a> /
+        {% for title, link in MENUITEMS %}
+        <a href="{{ link }}">{{ title }}</a> /
+        {% endfor %}
+        {% if FEED_ALL_ATOM %}
+        <a href="{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}">Atom</a>
+        {% endif %}
+        {% if FEED_ALL_RSS %}
+        <a href="{{ FEED_DOMAIN }}/{{ FEED_ALL_RSS }}">RSS</a>
+        {% endif %}
+        </p>
+    </header>
+    {% endif %}
+<!--
     <header>
       <p>
       <a href="{{ SITEURL }}">Index</a> &brvbar; <a href="{{ SITEURL }}/archives.html">Archives</a>
@@ -77,7 +107,7 @@
       {% endblock header %}
       </p>
     </header>
-
+-->
     {% block content %}
     {% endblock %}
 
@@ -85,7 +115,7 @@
     {% endblock %}
 
     <div id="ending_message">
-      <p>&copy; {{ AUTHOR }}. Built using <a href="http://getpelican.com" target="_blank">Pelican</a>. Theme by Giulio Fidente on <a href="https://github.com/gfidente/pelican-svbhack" target="_blank">github</a>. {% if INTERNET_DEFENSE_LEAGUE %}Member of the <a href="http://internetdefenseleague.org">Internet Defense League</a>.{% endif %}</p>
+      <p>&copy; {{ AUTHOR }}. Built using <a href="http://getpelican.com" target="_blank">Pelican</a>. Theme by Giulio Fidente on <a href="https://github.com/gfidente/pelican-svbhack" target="_blank">github</a>. Forked and modified by Roger Gonzalez on <a href="https://github.com/Rogergonzalez21/pelican-svbhack" target="_blank">github</a>  {% if INTERNET_DEFENSE_LEAGUE %}Member of the <a href="http://internetdefenseleague.org">Internet Defense League</a>.{% endif %}</p>
     </div>
   </main>
   {% include "modules/idl.html" %}
