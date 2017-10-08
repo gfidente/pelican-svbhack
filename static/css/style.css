@@ -49,6 +49,10 @@ img {
   max-width: 100%;
   border-radius: 8px;
 }
+img.align-center {
+    display: block;
+    margin: 0 auto;
+}
 aside div#user_meta {
   padding-top: 90px;
   padding-left: 60px;
