@@ -51,8 +51,9 @@ img {
   border-radius: 8px;
 }
 aside div#user_meta {
-  padding: 40px;
-  /*text-align: center;*/
+  padding-top: 90px;
+  padding-left: 60px;
+  padding-right: 60px;
 }
 aside div#user_meta h2 {
   margin: 15px 0 5px 0;
@@ -92,9 +93,8 @@ main header p {
   text-transform: uppercase;
 }
 main article {
-  max-width: 100%;
-  padding-left: 4%;
-  padding-right: 4%;
+  width: 560px;
+  padding-left: 5%;
 }
 main article div.article_text {
   line-height: 1.8em;
@@ -286,7 +286,7 @@ a.advert:hover {
     margin: 10px 0 0 0;
   }
   aside div#user_meta {
-    /* max-width: 192px; */
+    max-width: 240px;
     text-align: center;
   }
   aside div#user_meta ul li {
