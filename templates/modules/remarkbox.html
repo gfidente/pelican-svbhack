@@ -1,8 +1,7 @@
 {% if REMARKBOX %}
   <div id="article_comments">
     <div id="disqus_thread">
-        <!-- Remarkbox - readers want to communicate with you -->
-        <script type="text/javascript" src="https://demo.remarkbox.com/static/js/iframe-resizer/iframeResizer.min.js"></script><script type="text/javascript">thread_fragment=window.location.hash; thread_uri=window.location.href; document.write('<iframe id="remarkbox" src="https://demo.remarkbox.com/embed?thread_uri=' + thread_uri + '" title="remarkbox" width="100%" style="width: 100% !important; border: none !important; overflow: hidden !important;" allowtransparency="true" scrolling="no" horizontalscrolling="no" verticalscrolling="no" tabindex="0" seamless></iframe>'); iFrameResize({inPageLinks: true, initCallback: function(iframe){iframe.iFrameResizer.moveToAnchor(thread_fragment);}}, document.getElementById("remarkbox") );</script><noscript><iframe id="remarkbox" src="https://demo.remarkbox.com/embed?nojs=true" frameborder="0" style="height: 600px; width: 100%; border: none !important;" allowtransparency="true" height="600px" width="100%"></iframe></noscript>
-    </div>
+    <!-- Remarkbox - Your readers want to communicate with you -->
+    <script src="https://demo.remarkbox.com/static/js/iframe-resizer/iframeResizer.min.js"></script> <script> var thread_fragment = window.location.hash; var thread_uri = window.location.href; document.write('<iframe id="remarkbox" src="https://demo.remarkbox.com/embed?thread_uri=' + thread_uri + '" title="remarkbox" width="100%" style="width: 100% !important; border: none !important; overflow: hidden !important;" tabindex="0"></iframe>'); iFrameResize({ checkOrigin: ["https://demo.remarkbox.com"], inPageLinks: true, initCallback: function(e) { e.iFrameResizer.moveToAnchor(thread_fragment) } }, document.getElementById("remarkbox")); </script> <noscript> <iframe id=remarkbox src="https://demo.remarkbox.com/embed?nojs=true" style=height:600px;width:100%;border:none!important tabindex=0></iframe> </noscript>    </div>
   </div>
 {% endif %}
