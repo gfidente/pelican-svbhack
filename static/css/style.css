@@ -4,7 +4,7 @@ body {
   background-color: #ffffff;
   color: #4d4d4d;
   font-family: 'PT Sans', sans-serif;
-  font-size: 18px;
+  font-size: 20px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -306,7 +306,7 @@ a.advert:hover {
   }
   main article {
     max-width: 100%;
-    width: 560px;
+    width: 660px;
   }
 
   main article div.article_title h1 {

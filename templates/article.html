@@ -10,9 +10,11 @@
   <div class="article_title">
     <h1><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h1>
   </div>
+
   <div class="article_text">
     {{ article.content }}
   </div>
+
   <div class="article_meta">
     <p>{{ article.locale_date }}</p>
     {% if article.tags %} Tags:
@@ -22,6 +24,27 @@
     {% endif %}
     </p>
   </div>
+
+  <br/>
+  <br/>
+
+  <hr>
+
+  <br/>
+  <br/>
+
+  <div>
+    <b>Are you looking for a <a href="https://www.remarkbox.com">Disqus alternative</a>?</b>
+    <br/>
+    <br/>
+    You should check out my latest project, <a href="https://www.remarkbox.com">Remarkbox</a>.
+    It's a <span class="avoidwrap">comment system</span> that works everywhere, <span class="avoidwrap">even static sites</span>!
+  </div>
+
+
+  <br/>
+
+  <hr>
 
   {% include "modules/remarkbox.html" %}
   {% include "modules/disqus.html" %}
