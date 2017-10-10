@@ -136,7 +136,7 @@ main article div.article_text pre {
 main article div.article_text blockquote {
   margin: 22px 2px 22px 2px;
   padding-left: 22px;
-  border-left: 2px solid #0e94ec
+  border-left: 2px solid #0e94ec;
   color: #999999;
   font-style: italic;
 }
