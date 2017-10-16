@@ -5,10 +5,11 @@
 @med-grey:  #999999;
 @dark-grey:  #4d4d4d;
 @blue:  #0e94ec;
-@accent:  @blue;
-@sans: 'PT Sans', sans-serif;
-@serif: 'PT Serif', serif;
-@mono: 'PT Mono', monospace;
+@accent:  @red;
+@sans: sans-serif;
+@serif: serif;
+@mono: monospace;
+
 
 body {
   margin: 0;
@@ -16,7 +17,8 @@ body {
   background-color: @white;
   color: @dark-grey;
   font-family: @sans;
-  font-size: 18px;
+  font-size: 1.0rem;
+  font-weight: 300;
 }
 
 a {
@@ -71,6 +73,7 @@ aside {
     }
 
     h2 {
+      font-size: 1.0rem;
       margin: 15px 0 5px 0;
     }
 
@@ -146,18 +149,17 @@ main {
         color: @black;
         font-size: .8rem;
         font-family: @mono;
-        background: @light-grey;
+        font-weight: 400;
       }
 
       pre {
-        margin: 22px 2px 22px 2px;
-        padding: 2px;
+        margin: 22px 0px 22px 0px;
+        padding: 10px 5px;
         color: @black;
-        border-left: 3px solid @accent;
+        border-left: 2px solid @accent;
         font-size: .8rem;
         font-family: @mono;
-        background: @light-grey;
-        line-height: 1.125em;
+        line-height: 1.25rem;
         overflow-x: auto;
       }
 
@@ -170,7 +172,7 @@ main {
     }
 
     div.gist {
-      line-height: .875em;
+      line-height: .875rem;
     }
 
     div.article_meta {
@@ -187,9 +189,9 @@ main {
       padding: 5px 10px;
       border: 2px solid @accent;
       .border-radius(20px);
-      text-transform: uppercase;
+      text-transform: lowercase;
       color: @accent;
-      font-size: 1rem;
+      font-size: .75rem;
       &:hover {
         color: @white;
         background-color: @accent;
