@@ -2,13 +2,8 @@
 <html lang="{{ DEFAULT_LANG }}">
 
 <head>
-  <!-- ## for client-side less
-  <link rel="stylesheet/less" type="text/css" href="{{ SITEURL }}/theme/css/style.less">
-  <script src="http://cdnjs.cloudflare.com/ajax/libs/less.js/1.7.3/less.min.js" type="text/javascript"></script>
-  -->
   <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/style.css">
   <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/pygments.css">
-  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=PT+Sans|PT+Serif|PT+Mono">
 
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -38,8 +33,7 @@
     <div id="user_meta">
       <a href="{{ SITEURL }}">
         {% if USER_LOGO_URL %}
-        <img src="{{ USER_LOGO_URL }}" alt="logo"
-        {%- if ROUND_USER_LOGO %} class="round-img"{% endif %}>
+        <div alt="logo" class="logo{%- if ROUND_USER_LOGO %} round-img{% endif %}"></div>
         {% else %}
         <img src="{{ SITEURL }}/theme/images/logo.png" alt="logo">
         {% endif %}
@@ -48,16 +42,16 @@
       <p>{{ TAGLINE }}</p>
       <ul>
         {% for title, link in MENUITEMS %}
-        <li><a href="{{ link }}">{{ title }}</a></li>
+        <li><a href="{{ link }}"><div>{{ title }}</div></a></div></li>
         {% endfor %}
         {% if DISPLAY_PAGES_ON_MENU %}{% for p in pages %}
-        <li><a href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a></li>
+        <li><a href="{{ SITEURL }}/{{ p.url }}"><div>{{ p.title }}</div></a></li>
         {% endfor %}{% endif %}
         {% for name, link in LINKS %}
-        <li><a href="{{ link }}" target="_blank">{{ name }}</a></li>
+        <li><a href="{{ link }}" target="_blank"><div>{{ name }}</div></a></li>
         {% endfor %}
         {% for name, link in SOCIAL %}
-        <li><a href="{{ link }}" target="_blank">{{ name }}</a></li>
+        <li><a href="{{ link }}" target="_blank"><div>{{ name }}</div></a></li>
         {% endfor %}
       </ul>
     </div>
@@ -85,7 +79,13 @@
     {% endblock %}
 
     <div id="ending_message">
-      <p>&copy; {{ AUTHOR }}. Built using <a href="http://getpelican.com" target="_blank">Pelican</a>. Theme by Giulio Fidente on <a href="https://github.com/gfidente/pelican-svbhack" target="_blank">github</a>. {% if INTERNET_DEFENSE_LEAGUE %}Member of the <a href="http://internetdefenseleague.org">Internet Defense League</a>.{% endif %}</p>
+        <!--
+            Site made with Pelican Static Site Generator: https://github.com/getpelican/pelican
+            Theme based on design by Giulio Fidente:      https://github.com/gfidente/pelican-svbhack
+        -->
+      <p>
+      &copy;{{ COPYRIGHT_YEAR }} {{ AUTHOR }}. {% if INTERNET_DEFENSE_LEAGUE %}Member of the <a href="https://internetdefenseleague.org">Internet Defense League</a>.{% endif %}
+      </p>
     </div>
   </main>
   {% include "modules/idl.html" %}

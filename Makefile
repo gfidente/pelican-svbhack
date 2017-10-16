@@ -8,5 +8,14 @@
 
 STYLE = default
 
+all: pygments style
+
 pygments:
 	pygmentize -S ${STYLE} -f html > ./static/css/pygments.css
+
+style: static/css/style.css
+
+static/css/style.css: static/css/style.less
+	lessc ./static/css/style.less > ./static/css/style.css
+
+PHONY:= pygments style

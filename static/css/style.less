@@ -5,10 +5,11 @@
 @med-grey:  #999999;
 @dark-grey:  #4d4d4d;
 @blue:  #0e94ec;
-@accent:  @blue;
-@sans: 'PT Sans', sans-serif;
-@serif: 'PT Serif', serif;
-@mono: 'PT Mono', monospace;
+@accent:  @red;
+@sans: sans-serif;
+@serif: serif;
+@mono: monospace;
+
 
 body {
   margin: 0;
@@ -16,12 +17,19 @@ body {
   background-color: @white;
   color: @dark-grey;
   font-family: @sans;
-  font-size: 18px;
+  font-size: 1.0rem;
+  font-weight: 300;
 }
 
 a {
   color: @black;
   text-decoration: none;
+    &:hover {
+      color: #ff0000;
+    }
+    &:active {
+      color: #ff0000;
+    }
 }
 
 hr {
@@ -29,6 +37,8 @@ hr {
   background-color: @light-grey;
   height: 1px;
   border: none;
+  float: left;
+  width: 100%;
 }
 
 .border-radius (@radius: 5px) {
@@ -51,8 +61,27 @@ aside {
   div#user_meta {
     padding: 40px;
     text-align: center;
+    max-width: 400px;
+    margin: auto;
+
+    div.logo {
+        height: 195px;
+        max-width: 100%;
+        overflow: hidden;
+        background: url('/static/images/logo.svg') no-repeat center;
+        background-size: contain;
+        &:hover {
+            background: url('/static/images/logo-hover.svg') no-repeat center;
+            background-size: contain;
+        }
+        &:active {
+            background: url('/static/images/logo-hover.svg') no-repeat center;
+            background-size: contain;
+        }
+    }
 
     h2 {
+      font-size: 1.0rem;
       margin: 15px 0 5px 0;
     }
 
@@ -62,20 +91,34 @@ aside {
     }
 
     ul {
-      margin: 40px 0 0 0;
+      margin: auto;
+      max-width: 300px;
       padding-left: 0;
       font-size: .9rem;
       list-style-type: none;
 
       li {
         display: inline;
-        line-height: 3em;
+        line-height: 3rem;
 
         a {
-          padding: 5px 15px 5px 15px;
-          border: 3px solid @light-grey;
-          .border-radius(15px);
+          padding: 0px;
           color: @med-grey;
+
+          div {
+            margin: 7px 0px;
+            padding: 5px 15px 5px 15px;
+            border: 2px solid #eeeeee;
+            border-radius: 15px;
+            text-align: center;
+            line-height: 1.1rem;
+            &:hover {
+                border-color: @accent
+            }
+            &:active {
+                border-color: @accent
+            }
+          }
         }
       }
     }
@@ -84,7 +127,7 @@ aside {
 
 main {
   header {
-    padding: 40px;
+    padding: 10px 40px;
     border-top: @light-grey 1px solid;
     border-bottom: @light-grey 1px solid;
 
@@ -97,13 +140,13 @@ main {
 
   article {
     max-width: 640px;
-    padding: 40px;
+    padding: 15px 40px;
 
     div.article_title {
     }
 
     div.article_text {
-      line-height: 1.375em;
+      line-height: 1.375rem;
       a {
         text-decoration: underline;
       }
@@ -114,18 +157,17 @@ main {
         color: @black;
         font-size: .8rem;
         font-family: @mono;
-        background: @light-grey;
+        font-weight: 400;
       }
 
       pre {
-        margin: 22px 2px 22px 2px;
-        padding: 2px;
+        margin: 22px 0px 22px 0px;
+        padding: 10px 5px;
         color: @black;
-        border-left: 3px solid @accent;
+        border-left: 2px solid @accent;
         font-size: .8rem;
         font-family: @mono;
-        background: @light-grey;
-        line-height: 1.125em;
+        line-height: 1.25rem;
         overflow-x: auto;
       }
 
@@ -138,7 +180,7 @@ main {
     }
 
     div.gist {
-      line-height: .875em;
+      line-height: .875rem;
     }
 
     div.article_meta {
@@ -152,12 +194,12 @@ main {
     padding: 40px;
 
     a.button_accent {
-      padding: 10px;
+      padding: 5px 10px;
       border: 2px solid @accent;
       .border-radius(20px);
-      text-transform: uppercase;
+      text-transform: lowercase;
       color: @accent;
-      font-size: 1rem;
+      font-size: .75rem;
       &:hover {
         color: @white;
         background-color: @accent;
@@ -182,7 +224,7 @@ main {
 
 @media screen and (min-width: 1024px) {
   aside {
-    width: 25%;
+    width: 280px;
     height: 100%;
     position: fixed;
     top: 0;
@@ -194,8 +236,25 @@ main {
     }
 
     div#user_meta {
-      max-width: 192px;
+      max-width: 195px;
       text-align: right;
+
+      div.logo {
+        height: 195px;
+        max-width: 100%;
+        margin: auto;
+        overflow: hidden;
+        background: url('/static/images/logo.svg') no-repeat;
+        background-size: contain;
+        &:hover {
+            background: url('/static/images/logo-hover.svg') no-repeat;
+            background-size: contain;
+        }
+        &:active {
+            background: url('/static/images/logo-hover.svg') no-repeat;
+            background-size: contain;
+        }
+      }
 
       ul {
         li {
@@ -209,7 +268,7 @@ main {
     width: 75%;
     position: absolute;
     top: 0;
-    left: 25%;
+    left: 280px;
     overflow-x: hidden;
     overflow-y: hidden;
 
