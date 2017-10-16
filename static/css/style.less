@@ -24,6 +24,12 @@ body {
 a {
   color: @black;
   text-decoration: none;
+    &:hover {
+      color: #ff0000;
+    }
+    &:active {
+      color: #ff0000;
+    }
 }
 
 hr {
@@ -31,6 +37,8 @@ hr {
   background-color: @light-grey;
   height: 1px;
   border: none;
+  float: left;
+  width: 100%;
 }
 
 .border-radius (@radius: 5px) {
