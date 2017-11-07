@@ -105,9 +105,9 @@ main article div.article_text {
   line-height: 1.8em;
 }
 
-main article div.article_text a {
-  border-bottom: 1px dotted #1EAEDB;
-  color: #1EAEDB;
+main article div.article_text a,
+div.remarkbox-shoutout a {
+  color: #0084B4;
 }
 main article div.article_text .toc-backref {
   border-bottom: 0px;
@@ -125,7 +125,7 @@ main article div.article_text pre {
   padding: 2%; 
 
   color: #000000;
-  border-left: 2px solid #0e94ec;
+  border-left: 2px solid #0084B4;
 
   font-size: 14px;
   font-family: 'PT Mono', monospace;
@@ -139,7 +139,7 @@ main article div.article_text pre {
 main article div.article_text blockquote {
   margin: 22px 2px 22px 2px;
   padding-left: 22px;
-  border-left: 2px solid #0e94ec;
+  border-left: 2px solid #0084B4;
   color: #999999;
   font-style: italic;
 }
@@ -178,7 +178,7 @@ div.contents {
   margin: 40px;
   padding: 2%; 
   border-radius: 8px;
-  border-left: 2px solid #0e94ec;
+  border-left: 2px solid #0084B4;
   background-color: #FAFAFA;
 }
 p.topic-title {
@@ -218,7 +218,7 @@ div.advert {
   padding: 20px;
   border-radius: 8px;
   text-align: left;
-  border-left: 2px solid #0e94ec;
+  border-left: 2px solid #0084B4;
 }
 
 a.advert {
