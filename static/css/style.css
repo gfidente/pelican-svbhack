@@ -32,7 +32,6 @@ hr {
 tt {
   font-family: Courier New,Courier,Lucida Sans Typewriter,Lucida Typewriter,monospace;
   font-size: .8em;
-  color: #E74C3C;
   border: solid 1px #e1e4e5;
   box-sizing: border-box;
   /*line-height: 24px;*/
@@ -40,6 +39,9 @@ tt {
   padding-left: 5px;
   padding-right: 5px;
   padding-bottom: 2px;
+  margin: 0;
+  background-color: rgba(27,31,35,0.05);
+  border-radius: 3px;
 }
 dt {
   font-weight: bold;
@@ -104,7 +106,8 @@ main article div.article_text {
 }
 
 main article div.article_text a {
-  border-bottom: 1px dotted #BBB;
+  border-bottom: 1px dotted #1EAEDB;
+  color: #1EAEDB;
 }
 main article div.article_text .toc-backref {
   border-bottom: 0px;
