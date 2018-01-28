@@ -121,18 +121,16 @@ main article div.article_text code {
   background-color: #FAFAFA;
 }
 main article div.article_text pre {
-  margin: 40px;
-  padding: 2%; 
-
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  padding: 2%;
   color: #000000;
   border-left: 2px solid #0084B4;
-
-  font-size: 14px;
+  font-size: 12px;
   font-family: 'PT Mono', monospace;
-
   line-height: 1.125em;
   overflow-x: auto;
-
   border-radius: 8px;
   background-color: #FAFAFA;
 }
