@@ -3,19 +3,19 @@
 
 {% block head %}
 {% if CATEGORY_FEED_ATOM %}
-<link href="{{ FEED_DOMAIN }}/{{ CATEGORY_FEED_ATOM|format(category.slug) }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} {{ category }} Category Atom" />
+<link href="{{ FEED_DOMAIN }}/{{ CATEGORY_FEED_ATOM|replace("{slug}", category.slug) }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} {{ category }} Category Atom" />
 {% endif %}
 {% if CATEGORY_FEED_RSS %}
-<link href="{{ FEED_DOMAIN }}/{{ CATEGORY_FEED_RSS|format(category.slug) }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} {{ category }} Category RSS" />
+<link href="{{ FEED_DOMAIN }}/{{ CATEGORY_FEED_RSS|replace("{slug}", category.slug) }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} {{ category }} Category RSS" />
 {% endif %}
 {% endblock %}
 
 {% block header %}
 &gt; Category: {{ category }}
 {% if CATEGORY_FEED_ATOM %}
-&brvbar; <a href="{{ FEED_DOMAIN }}/{{ CATEGORY_FEED_ATOM|format(category.slug) }}">Atom</a>
+&brvbar; <a href="{{ FEED_DOMAIN }}/{{ CATEGORY_FEED_ATOM|replace("{slug}", category.slug) }}">Atom</a>
 {% endif %}
 {% if CATEGORY_FEED_RSS %}
-&brvbar; <a href="{{ FEED_DOMAIN }}/{{ CATEGORY_FEED_RSS|format(category.slug) }}">RSS</a>
+&brvbar; <a href="{{ FEED_DOMAIN }}/{{ CATEGORY_FEED_RSS|replace("{slug}", category.slug) }}">RSS</a>
 {% endif %}
 {% endblock %}
