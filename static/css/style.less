@@ -135,6 +135,21 @@ main {
         color: @med-grey;
         font-style: italic;
       }
+
+      // quoteblock and attribution are used by the asciidoc backend.
+      div.quoteblock {
+        border-left: 5px solid @light-grey;
+        color: @med-grey;
+        margin-bottom: 1.5em;
+        margin-left: 1.0em;
+        margin-right: 10%;
+        margin-top: 1.0em;
+        padding-left: 1.0em;
+      }
+      div.quoteblock > div.attribution {
+        padding-top: 0.5em;
+        text-align: right;
+      }
     }
 
     div.gist {

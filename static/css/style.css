@@ -98,6 +98,19 @@ main article div.article_text blockquote {
   color: #999999;
   font-style: italic;
 }
+main article div.article_text div.quoteblock {
+  border-left: 5px solid #eeeeee;
+  color: #999999;
+  margin-bottom: 1.5em;
+  margin-left: 1em;
+  margin-right: 10%;
+  margin-top: 1em;
+  padding-left: 1em;
+}
+main article div.article_text div.quoteblock > div.attribution {
+  padding-top: 0.5em;
+  text-align: right;
+}
 main article div.gist {
   line-height: .875em;
 }
