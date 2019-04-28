@@ -55,6 +55,9 @@
         {% if DISPLAY_PAGES_ON_MENU %}{% for p in pages %}
         <li><a href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a></li>
         {% endfor %}{% endif %}
+        {% if DISPLAY_CATEGORIES_ON_MENU %}{% for c, _ in categories %}
+        <li><a href="{{ SITEURL }}/{{ c.url }}">{{ c }}</a></li>
+        {% endfor %}{% endif %}
         {% for name, link in LINKS %}
         <li><a href="{{ link }}" target="_blank">{{ name }}</a></li>
         {% endfor %}
