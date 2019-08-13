@@ -114,7 +114,7 @@ main article div.article_text div.quoteblock > div.attribution {
 main article div.gist {
   line-height: .875em;
 }
-main article div.article_meta {
+main article div.article_meta, div.article_readtime {
   font-size: .7rem;
   color: #999999;
 }

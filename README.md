@@ -14,6 +14,7 @@ You can see the [theme in action](http://www.giuliofidente.com/).
 - syntax highlighting for pre blocks
 - supports google analytics
 - custom list of links
+- supports the [readtime](https://github.com/getpelican/pelican-plugins/tree/master/readtime) plugin
 
 ## KNOWN ISSUES
 

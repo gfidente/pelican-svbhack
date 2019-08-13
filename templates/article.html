@@ -10,6 +10,11 @@
   <div class="article_title">
     <h1><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h1>
   </div>
+  {% if article.readtime %}
+  <div class="article_readtime">
+    <p>Estimated read time: {{article.readtime.minutes}} minutes</p>
+  </div>
+  {% endif %}
   <div class="article_text">
     {{ article.content }}
   </div>
