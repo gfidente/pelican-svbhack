@@ -10,6 +10,9 @@
   <div class="article_title">
     <h1><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h1>
   </div>
+  <div class="article_meta">
+    <p>Posted on: {{ article.locale_date }}</p>
+  </div>
   {% if article.readtime %}
   <div class="article_readtime">
     <p>Estimated read time: {{article.readtime.minutes}} minutes</p>
@@ -19,7 +22,6 @@
     {{ article.content }}
   </div>
   <div class="article_meta">
-    <p>Posted on: {{ article.locale_date }}</p>
     <p>Category: <a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a>
       {% if article.tags %} &ndash; Tags:
       {% for tag in article.tags %}
