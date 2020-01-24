@@ -111,6 +111,11 @@ main article div.article_text div.quoteblock > div.attribution {
   padding-top: 0.5em;
   text-align: right;
 }
+main article div.article_text div.imageblock {
+  margin: 5px;
+  border: 1px solid #eeeeee;
+  padding: 5px;
+}
 main article div.gist {
   line-height: .875em;
 }
