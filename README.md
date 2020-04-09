@@ -37,6 +37,8 @@ Supports a number of common global variables but patches are welcomed if you nee
 
 - `HIDE_USER_LOGO` set this to `True` to hide the placeholder without adding your logo
 
+- `USE_GENERIC_FONT_FAMILIES` set this to `True` to use generic font families and avoid using Google Fonts
+
 - `DISQUS_SITENAME` set this to your Disqus sitename to enable disqus comments in articles
 
 - `TAGLINE` some text rendered right below the logo
