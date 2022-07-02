@@ -116,6 +116,14 @@ main article div.article_text div.imageblock {
   border: 1px solid #eeeeee;
   padding: 5px;
 }
+main article div.article_text figure {
+  margin: 5px;
+  border: 1px solid #eeeeee;
+  padding: 5px;
+}
+main article div.article_text figcaption {
+  text-align: center;
+}
 main article div.gist {
   line-height: .875em;
 }
