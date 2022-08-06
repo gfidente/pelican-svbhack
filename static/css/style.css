@@ -124,6 +124,18 @@ main article div.article_text figure {
 main article div.article_text figcaption {
   text-align: center;
 }
+main article div.article_text h1 a.headerlink,
+main article div.article_text h2 a.headerlink,
+main article div.article_text h3 a.headerlink,
+main article div.article_text h4 a.headerlink {
+  visibility: hidden;
+}
+main article div.article_text h1:hover a.headerlink,
+main article div.article_text h2:hover a.headerlink,
+main article div.article_text h3:hover a.headerlink,
+main article div.article_text h4:hover a.headerlink {
+  visibility: visible;
+}
 main article div.gist {
   line-height: .875em;
 }
