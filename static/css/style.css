@@ -19,6 +19,15 @@ hr {
 img {
   max-width: 100%;
 }
+table {
+  border-collapse: collapse;
+}
+th,
+td {
+  padding: 4px;
+  border-width: thin;
+  border-style: solid;
+}
 .round-img {
   border-radius: 50%;
   padding: 2px;
