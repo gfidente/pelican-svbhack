@@ -11,6 +11,9 @@
   {% if not USE_GENERIC_FONT_FAMILIES %}
   <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=PT+Sans|PT+Serif|PT+Mono">
   {% endif %}
+  {% if PELICAN_SEARCH %}
+  <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/stork.css">
+  {% endif %}
 
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -73,6 +76,10 @@
   <main>
     <header>
       <p>
+      {% if PELICAN_SEARCH %}
+      <input data-stork="sitesearch" />
+      <div data-stork="sitesearch-output"></div>
+      {% endif %}
       <a href="{{ SITEURL }}">Index</a> &brvbar; <a href="{{ SITEURL }}/archives.html">Archives</a>
       {% if FEED_ALL_ATOM %}
       &brvbar; <a href="{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}">Atom</a>
@@ -96,5 +103,6 @@
     </div>
   </main>
   {% include "modules/idl.html" %}
+  {% include "modules/pelican-search.html" %}
 </body>
 </html>
