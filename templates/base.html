@@ -75,11 +75,11 @@
 
   <main>
     <header>
-      <p>
       {% if PELICAN_SEARCH %}
       <input data-stork="sitesearch" />
       <div data-stork="sitesearch-output"></div>
       {% endif %}
+      <p>
       <a href="{{ SITEURL }}">Index</a> &brvbar; <a href="{{ SITEURL }}/archives.html">Archives</a>
       {% if FEED_ALL_ATOM %}
       &brvbar; <a href="{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}">Atom</a>
