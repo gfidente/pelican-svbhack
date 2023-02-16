@@ -15,6 +15,7 @@ You can see the [theme in action](http://www.giuliofidente.com/).
 - supports google analytics and [matomo](https://matomo.org/)
 - custom list of links
 - supports the [readtime](https://github.com/getpelican/pelican-plugins/tree/master/readtime) plugin
+- supports the [series](https://github.com/pelican-plugins/series) plugin
 
 ## KNOWN ISSUES
 
