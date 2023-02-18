@@ -15,6 +15,7 @@ You can see the [theme in action](http://www.giuliofidente.com/).
 - supports google analytics and [matomo](https://matomo.org/)
 - custom list of links
 - supports the [readtime](https://github.com/getpelican/pelican-plugins/tree/master/readtime) plugin
+- supports the [pelican-search](https://github.com/pelican-plugins/search) plugin
 
 ## KNOWN ISSUES
 
@@ -48,6 +49,8 @@ Supports a number of common global variables but patches are welcomed if you nee
 - `TAGLINE` some text rendered right below the logo
 
 - `INTERNET_DEFENSE_LEAGUE` set this to `True` if you want to enable the [Internet Defense League](http://internetdefenseleague.org) code
+
+- `PELICAN_SEARCH` set this to `True` if you want to use the [pelican-search](https://github.com/pelican-plugins/search) plugin
 
 When developing locally, you may want to set the following variable: `SITEURL = http://localhost:8000`
 
