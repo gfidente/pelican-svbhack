@@ -4,7 +4,7 @@ pelican-svbhack is a responsive theme for [Pelican](http://getpelican.com), it i
 
 ## DEMO
 
-You can see the [theme in action](http://www.giuliofidente.com/).
+You can see the [theme in action](http://www.gfidente.com/).
 
 ![theme screenshot](https://raw.github.com/gfidente/pelican-svbhack/master/screenshot.png)
 
