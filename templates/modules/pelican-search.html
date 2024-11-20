@@ -1,0 +1,8 @@
+{% if PELICAN_SEARCH %}
+<script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/stork.js"></script>
+<script>
+    stork.initialize("{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/stork.wasm")
+    stork.downloadIndex("sitesearch", "/search-index.st")
+    stork.attach("sitesearch")
+</script>
+{% endif %}
